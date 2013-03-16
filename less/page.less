@@ -1,0 +1,60 @@
+/**
+ * @package WordPress
+ * @subpackage DE-Minimal
+ */
+ 
+/* PAGE Style */
+
+.page {
+	.background {
+		 background: #DDE7F2;
+	}
+	
+	.blase {
+		margin-top: 2px;
+		background: #fff;
+		background: rgba(255,255,255,0.7);
+		padding-left: 11px;
+		margin-bottom: 20px;
+		border: 1px solid #d1e7f4;
+		border-radius: 3px;
+		padding: 20px 20px 0px 20px;
+		position: relative;
+		 
+		h1 {
+	    	margin-top: 0;
+	    }
+	    
+	    ol {
+			margin-bottom: 15px;
+		}
+		ol li {
+			margin-left: 30px;
+			list-style-type: decimal;
+		}
+	
+		&:after, &:before {
+			right: 100%;
+			border: solid transparent;
+			content: " ";
+			height: 0;
+			width: 0;
+			position: absolute;
+			pointer-events: none;
+		}
+		
+		&:after {
+			border-right-color: rgba(255,255,255,0.7);
+			border-width: 15px;
+			top: 60px;
+			margin-top: -15px;
+		}
+		
+		&:before {
+			border-right-color: #d1e7f4;
+			border-width: 16px;
+			top: 60px;
+			margin-top: -16px;
+		}
+	}
+}
