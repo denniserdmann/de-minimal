@@ -46,7 +46,7 @@
 <link rel="stylesheet" href="<?php echo bloginfo('stylesheet_directory')?>/less/compiled/style-min.css" type="text/css" media="all">
 <?php /* -- END LESS CSS -- */ ?>
 <?php wp_head(); ?>
-<link rel="stylesheet" href="http://denniserdmann.de/wp-content/themes/denniserdmann/tinymce.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="<?php echo bloginfo('stylesheet_directory')?>/tinymce.css" type="text/css" media="screen" />
 <?php if (is_home()) {
  query_posts( array( 'category__not_in' => array(85), 'category_name' => 'journal,job', 'paged' => get_query_var('paged') ) );
 } ?> 
@@ -86,8 +86,8 @@ $background = get_post_meta($post->ID, "hintergrund", true);
 <body <?php body_class(); ?>>
 <header>
 	<div id="logo">
-		<a href="http://denniserdmann.de/" title="Dennis Erdmann">
-			<img src="/wp-content/themes/denniserdmann/images/dennis-circle-2x.png" width="105" height="110" />
+		<a href="./" title="<?php bloginfo( 'name' ); ?>">
+			<img src="<?php echo bloginfo('stylesheet_directory')?>/images/dennis-circle-2x.png" width="105" height="110" />
 		</a>
 	</div>
 </header>
