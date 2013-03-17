@@ -86,7 +86,7 @@ $background = get_post_meta($post->ID, "hintergrund", true);
 <body <?php body_class(); ?>>
 <header>
 	<div id="logo">
-		<a href="./" title="<?php bloginfo( 'name' ); ?>">
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php bloginfo( 'name' ); ?>">
 			<img src="<?php echo bloginfo('stylesheet_directory')?>/images/dennis-circle-2x.png" width="105" height="110" />
 		</a>
 	</div>
