@@ -3,6 +3,53 @@
  * @subpackage DE-Minimal
  */
  
+ /* HEADER NAV */
+ nav.head {
+	 color: #fff;
+	 text-align: center;
+	 width: 100%;
+	 margin: 0 auto;
+	 top: -3.7em;
+	 position: absolute;
+	 z-index: 6000;
+	 transition: position .3s;
+	-moz-transition: position .3s; /* Firefox 4 */
+	-webkit-transition: position .3s; /* Safari and Chrome */
+	-o-transition: position .3s; /* Opera */
+	 
+	 &:hover {
+		 top: 0px;
+		 transition: position .3s;
+		-moz-transition: position .3s; /* Firefox 4 */
+		-webkit-transition: position .3s; /* Safari and Chrome */
+		-o-transition: position .3s; /* Opera */
+	 }
+	 
+	ul {
+		background: #eee;
+		background: rgba(30,30,30,.8);
+		margin: 0;
+		padding: 1em 0;
+	}
+	li {
+		display: inline;
+		padding: 0 1em;
+	}
+	 
+	 i {
+		 border-bottom-left-radius: 6px;
+		 border-bottom-right-radius: 6px;
+		 background: #eee;
+		 background: rgba(30,30,30,.8);
+
+		 width: 1em;
+		 padding: 0.2em 0.3em;
+		 display: block;
+		 margin: 0 auto;
+		 margin-bottom: -1.3em;
+	 }
+ }
+ 
  /* FOOTER NAV */
 .nav_footer {
 	margin: 0 auto;

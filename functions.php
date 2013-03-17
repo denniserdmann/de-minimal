@@ -74,8 +74,9 @@ if ( function_exists( 'add_filter' ) ) {
 <?php // Menu-Support in Theme
 function register_my_menus() {
   register_nav_menus(
-    array( 'footer-menu' => __( 'Footer Menu' ) )
-  );
+    array( 'footer-menu' => __( 'Footer Menu' ),
+    		'header-menu' => __( 'Header Menu')
+  ));
 }
 add_action( 'init', 'register_my_menus' );
 ?>

@@ -85,9 +85,15 @@ $background = get_post_meta($post->ID, "hintergrund", true);
 </head>
 <body <?php body_class(); ?>>
 <header>
-	<div id="logo">
-		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php bloginfo( 'name' ); ?>">
-			<img src="<?php echo bloginfo('stylesheet_directory')?>/images/dennis-circle-2x.png" width="105" height="110" />
-		</a>
+	<nav class="head">
+		<?php wp_nav_menu( array('menu' => 'Headermenü', 'container' => false, 'menu_class' => 'nav_header' )); ?>
+		<i class="icon-reorder"></i>
+	</nav>
+	<div class="logocontainer">
+		<div id="logo">
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php bloginfo( 'name' ); ?>">
+				<img src="<?php echo bloginfo('stylesheet_directory')?>/images/dennis-circle-2x.png" width="105" height="110" />
+			</a>
+		</div>
 	</div>
 </header>
