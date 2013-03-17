@@ -87,7 +87,7 @@ $background = get_post_meta($post->ID, "hintergrund", true);
 <header>
 	<nav class="head">
 		<?php wp_nav_menu( array('menu' => 'Headermenü', 'container' => false, 'menu_class' => 'nav_header' )); ?>
-		<i class="icon-reorder"></i>
+		<a href="#" onclick="return false"><i class="icon-reorder menu-open"></i></a>
 	</nav>
 	<div class="logocontainer">
 		<div id="logo">
