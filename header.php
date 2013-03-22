@@ -47,6 +47,7 @@
 <?php /* -- END LESS CSS -- */ ?>
 <?php wp_head(); ?>
 <link rel="stylesheet" href="<?php echo bloginfo('stylesheet_directory')?>/tinymce.css" type="text/css" media="screen" />
+<script type="text/javascript" src="<?php echo bloginfo('stylesheet_directory')?>/js/master.js"></script>
 <?php if (is_home()) {
  query_posts( array( 'category__not_in' => array(85), 'category_name' => 'journal,job', 'paged' => get_query_var('paged') ) );
 } ?> 

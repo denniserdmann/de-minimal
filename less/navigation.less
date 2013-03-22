@@ -4,55 +4,79 @@
  */
  
  /* HEADER NAV */
- nav.head {
+ 
+ a.menu-open {
+	 color: #333;
+	 width: 1em;
+	 padding: 0.3em 0.4em;
+	 display: block;
+	 position: absolute;
+	 left: 0; 
+	 top: 0;
+	 font-size: 1.2em;
+	 
+	 .icon-remove {
+		display: none;
+		color: #fff;
+	}
+}
+	 
+header nav {
 	 color: #fff;
 	 text-align: center;
 	 width: 100%;
-	 margin: 0 auto;
-	 top: -5.7em;
-	 position: absolute;
+	 height: 100%;
+	 position: fixed;
+	 overflow-y: scroll;
 	 z-index: 6000;
-	 transition: top .3s;
-	-moz-transition: top .3s; /* Firefox 4 */
-	-webkit-transition: top .3s; /* Safari and Chrome */
-	-o-transition: top .3s; /* Opera */
-
-	 &:hover {
-		 top: 0px;
-		 transition: top .3s;
-		-moz-transition: top .3s; /* Firefox 4 */
-		-webkit-transition: top 0.3s; /* Safari and Chrome */
-		-o-transition: top .3s; /* Opera */
-	 }
-	 
-	ul {
-		background: #eee;
-		background: rgba(30,30,30,.8);
-		margin: 0;
-		padding: 1em 0;
+	 top: -100%;
+	 opacity: 0;
+	 background: #68c4ee;
+/* 	 background: rgba(255,255,255,.9); */
+	 transition: top .6s, opacity .8s;
+	-moz-transition: top .6s, opacity .8s; /* Firefox 4 */
+	-webkit-transition: top .6s, opacity .8s; /* Safari and Chrome */
+	-o-transition: top .6s, opacity .8s; /* Opera */
+	
+	h1 {
+		font-size: 2em;
+		margin-bottom: 0.5em;
 	}
+	
+	ul {
+		height: 80%;
+		margin: 0 auto;
+		padding: 0;
+	} 
+	
 	li {
-		display: inline-block;
-		padding: 0 1em;
+		font-size: 2em;
+		font-family: @headFont;
+		margin: 0;
+		font-weight: bold;
 		
-		i {
-			font-size: 2em;
+		a {
+			color: #fff;
 		}
 		
-	}
-	 
-	 i.menu-open {
-		 border-bottom-left-radius: 6px;
-		 border-bottom-right-radius: 6px;
-		 background: #eee;
-		 background: rgba(30,30,30,.8);
-		 color: #fff;
-		 width: 1em;
-		 padding: 0.2em 0.5em;
-		 display: block;
-		 margin: 0 auto;
-	 }
+	}	
  }
+.offCanvas {
+	position: fixed;
+	 header nav {
+		 top: 0;
+		 opacity: 1;
+		 
+	 }
+	 
+	 .icon-reorder {
+		 display: none;
+	 }
+	 
+	 a.menu-open .icon-remove {
+		 display: inline;
+	 }
+}
  
  /* FOOTER NAV */
 .nav_footer {
