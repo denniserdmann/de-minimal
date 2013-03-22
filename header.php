@@ -86,9 +86,12 @@ $background = get_post_meta($post->ID, "hintergrund", true);
 </head>
 <body <?php body_class(); ?>>
 <header>
-	<nav class="head">
+	<div class="header-info">
+		<a class="menu-open" id="offCanvasToggler" href="#"><i class="icon-reorder"></i><i class="icon-remove"></i></a>
+	</div>
+	<nav>
+		<h1>MENÜ</h1>
 		<?php wp_nav_menu( array('menu' => 'Headermenü', 'container' => false, 'menu_class' => 'nav_header' )); ?>
-		<a href="#" onclick="return false"><i class="icon-reorder menu-open"></i></a>
 	</nav>
 	<div class="logocontainer">
 		<div id="logo">
