@@ -26,31 +26,33 @@
 		padding: 0.3em;
 		margin-top: 0.2em;
 		margin-bottom: 0.5em;
+		
+		.clearfix;
 	
 		& > div {
 			float: left;
 		}
 	
-		.date:after,
-		.commentcount:after {
+		& > div:after {
 			content: ',';
 			margin-right: 0.4em;
 		}
+		
+		& > div:last-child:after {
+			content: '';
+		}
 	
-		p a {
+		a {
 			text-decoration: none;
 		}
 		
 		br {
 			display: none;
 		}
-		
-		.clearfix;
 	}
 	
-
 	.entry, .cat-description {
-		max-width: 90%;
+		max-width: 86%;
 		padding-left: 0;
 		padding-right: 0;
 	}
