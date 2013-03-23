@@ -43,7 +43,7 @@ get_header(); ?>
         <?php the_content('Lies den Rest des Artikels &raquo;'); ?>
                      <?php if (is_linked_list()): ?>
 				<a style="margin-bottom: 15px;" class="button" href="<?php the_linked_list_link(); ?>" title="<?php printf( esc_attr__( 'Weiter zum Artikel: %s', 'twentyten' ), the_title_attribute( 'echo=0' ) ); ?>">
-					Linktipp ansehen
+					Artikel ansehen
 				</a>
 				<?php endif; ?>
                     </div><!-- Ende entry -->
