@@ -27,7 +27,6 @@
 					  	<i class="icon-comments"></i> <?php comments_popup_link(__('Kein Kommentar'), __('1 Kommentar'), __('% Kommentare'), __('') ); ?>
 					</div>
 					<?php endif; ?>
-					<div class="category">Kategorie: <?php the_category(', '); ?></div>
 					<?php the_tags('<div class="tags">Tags: ',',  ','</div>');  ?>  
 				</aside>
 			
