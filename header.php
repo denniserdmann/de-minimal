@@ -91,8 +91,9 @@ $background = get_post_meta($post->ID, "hintergrund", true);
 		<a class="menu-open" id="offCanvasToggler" href="#"><i class="icon-reorder"></i><i class="icon-remove"></i></a>
 	</div>
 	<nav>
-		<h1>MENÜ</h1>
+		<h1>Menü</h1>
 		<?php wp_nav_menu( array('menu' => 'Headermenü', 'container' => false, 'menu_class' => 'nav_header' )); ?>
+		<?php get_search_form(); // hier die Suche formatieren ?>
 	</nav>
 	<div class="logocontainer">
 		<div id="logo">
