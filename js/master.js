@@ -13,4 +13,5 @@ jQuery(function($) {
 
     $('#offCanvasToggler').on('click', toggleOnCanvas);
     $('nav').on('click', toggleOffCanvas);
+    $('.searchform').on('click', toggleOffCanvas);
 });

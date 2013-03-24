@@ -28,13 +28,13 @@ header nav {
 	 text-align: center;
 	 width: 100%;
 	 height: 100%;
+	 padding-bottom: 60px; // avoid blitzer at the bottom of navigation on smartphones
 	 position: fixed;
 	 overflow-y: scroll;
 	 z-index: 6000;
 	 top: -100%;
 	 opacity: 0;
 	 background: #68c4ee;
-/* 	 background: rgba(255,255,255,.9); */
 	 transition: top .6s, opacity .8s;
 	-moz-transition: top .6s, opacity .8s; /* Firefox 4 */
 	-webkit-transition: top .6s, opacity .8s; /* Safari and Chrome */
@@ -43,10 +43,10 @@ header nav {
 	h1 {
 		font-size: 2em;
 		margin-bottom: 0.5em;
+		color: #5599bb;
 	}
 	
 	ul {
-		height: 80%;
 		margin: 0 auto;
 		padding: 0;
 	} 
@@ -57,14 +57,31 @@ header nav {
 		margin: 0;
 		font-weight: bold;
 		
+		max-width: 10em;
+		padding: 0 0.5em;
+		margin: 0 auto;
+		
 		a {
 			color: #fff;
+			display: block;
+			line-height: 1.2;
+			margin-bottom: 0.875em;
+		}
+		
+		a:after {
+			content: attr(title);
+			display: block;
+			
+			font-family: @textFont;
+			font-size: 0.5em;
+			font-weight: normal;
+			font-style: italic;
 		}
 		
 	}	
  }
 .offCanvas {
-/* 	position: fixed; */
+	overflow: hidden;
 	 header nav {
 		 top: 0;
 		 opacity: 1;
