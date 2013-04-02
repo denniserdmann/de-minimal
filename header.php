@@ -33,11 +33,9 @@
 <![endif]-->
 <title><?php wp_title('&laquo;', true, 'right'); ?> <?php bloginfo('name'); ?></title>
 <?php // OPEN GRAPH PROTOCOL ?>
-<?php //if (is_single() || is_page() ) { ?>
   <meta property="og:title" content="<?php utf8_decode(single_post_title());?>"/>
   <meta property="og:image" content="<?php if (function_exists('catch_that_image')) {echo catch_that_image(); }?>"/>
   <meta property="og:url" content="<?php echo get_permalink();?>?utm_source=social_media"/>
-<?php //} ?>
 <?php // end OG PROTOCOL ?>
 <script type="text/javascript" src="http://use.typekit.com/jmq0rie.js"></script>
 <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
