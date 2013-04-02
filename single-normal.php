@@ -44,17 +44,11 @@
 					<h6><a rel="author" href="https://profiles.google.com/110602491035334689174">&Uuml;ber <?php the_author_meta('nickname');?></a></h6>
 					<p><?php the_author_meta('description');?></p>
 				</div>
-
-
              <?php comments_template(); ?>
 </div> <!-- end entry -->		
-</div> <!-- end background -->       
-        
+</div> <!-- end background -->              
 	<?php endwhile; else: ?>
-
 		<p>Ups, keine Ergebnisse zu diesem Aufruf.</p>
-
 <?php endif; ?>
 </article>
-
 <?php get_footer(); ?>

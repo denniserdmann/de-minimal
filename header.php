@@ -70,10 +70,8 @@ $background = get_post_meta($post->ID, "hintergrund", true);
 	.search #post-<?php echo $post->ID ?> h2,
 	.category #post-<?php echo $post->ID ?> h2 a  {<?php echo $headline; ?> }
 	  <?php if($linkcolor): ?>
-	  <?php /* .single #post-<?php echo $post->ID ?> h1 {color: #<?php echo $linkcolor; ?> } */ ?>
-
-	  #post-<?php echo $post->ID ?> a, .commentlist a {color: #<?php echo $linkcolor; ?>; }
-	  #post-<?php echo $post->ID ?> p a:hover { background: #<?php echo $linkcolor; ?>; color: #fff; }
+	 	 #post-<?php echo $post->ID ?> a, .commentlist a {color: #<?php echo $linkcolor; ?>; }
+	 	 #post-<?php echo $post->ID ?> p a:hover { background: #<?php echo $linkcolor; ?>; color: #fff; }
 	  <?php endif; ?>
 	  .postid-<?php echo $post->ID ?> .background,
 	  #post-<?php echo $post->ID ?> .background { <?php echo $background; ?>}

@@ -73,9 +73,7 @@ get_header();?>
 		}
 		get_search_form();
 
-	endif; ?>
-	
-	
+	endif; ?>	
 </div>
 </div>
 <?php get_footer(); ?>

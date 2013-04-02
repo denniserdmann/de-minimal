@@ -19,7 +19,6 @@ function new_excerpt_length($length) {
 }
 add_filter('excerpt_length', 'new_excerpt_length');
 ?>
-
 <?php /* Don't jump to #more on detail pages */
 function remove_more_jump_link($link) { 
 	$offset = strpos($link, '#more-');

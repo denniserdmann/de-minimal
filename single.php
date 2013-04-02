@@ -10,5 +10,4 @@ if ( has_post_format( 'image' )) {
 // Post Format DEFAULT
 } else {
 	include(TEMPLATEPATH . '/single-normal.php');
-}
-?>
+} ?>
