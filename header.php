@@ -32,6 +32,19 @@
 <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 <title><?php wp_title('&laquo;', true, 'right'); ?> <?php bloginfo('name'); ?></title>
+<?php // OPEN GRAPH PROTOCOL ?>
+<?php if (is_single() || is_page() ) { ?>
+  <meta property="og:title" content="<?php utf8_decode(single_post_title());?>"/>
+  <?php if ( has_post_thumbnail()) { 
+    $large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large'); ?>
+    <meta property="og:image" content="<?php echo $large_image_url['0'] ?>"/>
+  <?php }
+        else{ ?>
+    <meta property="og:image" content="<?php echo bloginfo('stylesheet_directory')?>/images/dennis-circle-2x.png"/>
+  <?php } ?>
+  <meta property="og:url" content="<?php echo get_permalink();?>?utm_source=social_media"/>
+<?php } ?>
+<?php // end OG PROTOCOL ?>
 <script type="text/javascript" src="http://use.typekit.com/jmq0rie.js"></script>
 <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
