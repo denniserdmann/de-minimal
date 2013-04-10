@@ -12,9 +12,9 @@
 	<?php
 		return;
 	}
+/* You can start editing here. */
 ?>
-<!-- You can start editing here. -->
-
+<div id="comments">
 <?php if ( have_comments() ) : ?>
 <h5 id="commentheadline">Kommentare:</h5>
  	<div class="commentnavigation">
@@ -80,3 +80,4 @@
 	<?php endif; // If registration required and not logged in ?>
 </div>
 <?php endif; // if you delete this the sky will fall on your head ?>
+</div>
