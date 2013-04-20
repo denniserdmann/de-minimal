@@ -6,7 +6,7 @@
 ?>
 <footer>
 		<?php wp_footer(); ?>
-		<?php wp_nav_menu( array('menu_class' => 'nav_footer' )); ?>
+		<?php wp_nav_menu( array('menu_class' => 'nav_footer entry' )); ?>
 			
 </footer>
 <script type="text/javascript" src="http://www.google-analytics.com/ga.js"></script>
