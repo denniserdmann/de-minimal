@@ -32,7 +32,7 @@ get_header(); ?>
 			<div id="post-<?php echo $page->ID; ?>">
 				<div class="background">
 					<div class="entry">
-						<h2><a href="<?php echo get_page_link( $page->ID ); ?>"><?php echo $page->post_title; ?></a></h2>
+						<h2><?php echo $page->post_title; ?></h2>
 						<?php echo $content; ?>
 					</div>
 				</div>
