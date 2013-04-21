@@ -9,6 +9,7 @@
 		<?php wp_nav_menu( array('menu_class' => 'nav_footer entry' )); ?>
 			
 </footer>
+<?php if(!is_user_logged_in()): ?>
 <script type="text/javascript" src="http://www.google-analytics.com/ga.js"></script>
 <script type="text/javascript">
 	<!--//--><![CDATA[//><!--
@@ -18,5 +19,6 @@
 	pageTracker._trackPageview();
 	//--><!]]>
 </script>
+<?php endif; ?>
 </body>
 </html>
