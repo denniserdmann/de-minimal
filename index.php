@@ -9,8 +9,7 @@ get_header(); ?>
   		<?php $count=1 //if($paged < 2) { // front page ?>
 			<?php while(have_posts()) : the_post(); ?>
 			  <?php $einruecken = get_post_meta($post->ID, "standard", true); ?>
-			<article id="post-<?php the_ID(); ?>" class="post<?php if (($einruecken=="") and (in_category( 'magazine' ))) echo ' nopadding'; ?>
-			<?php if ($count == 1) echo 'first' ?>" >
+			<article id="post-<?php the_ID(); ?>" class="post<?php if ($count == 1) echo ' first' ?>">
 			<div class="background">
 			  <div class="entry">
 <?php if (is_linked_list()): ?>
