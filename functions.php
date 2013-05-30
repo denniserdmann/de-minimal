@@ -13,6 +13,11 @@ add_theme_support( 'post-formats', array( 'aside', 'gallery','link','image','quo
 function new_excerpt_more($more) {
 return ' &hellip; <a href="'. get_permalink($post->ID) . '">' . 'Artikel&nbsp;lesen&nbsp;&raquo;' . '</a>';
 }
+// Activate Excerpts for Pages
+add_action('init', 'my_custom_excerpt');
+	function my_custom_excerpt() {
+		add_post_type_support( 'page', 'excerpt' );
+	}
 add_filter('excerpt_more', 'new_excerpt_more');
 function new_excerpt_length($length) {
 	return 20;
@@ -92,4 +97,10 @@ function catch_that_image() {
 			$first_img = bloginfo('stylesheet_directory')."/images/dennis-circle-2x.png";
 		}
 	return $first_img;
-} ?>
+}
+//
+// add h2 tag for subheading
+add_filter( 'subheading_tags', function( $tags ) {
+    $tags['br'] = array();
+    return $tags;
+} ); ?>
