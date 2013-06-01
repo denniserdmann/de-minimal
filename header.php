@@ -42,14 +42,7 @@
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 <!-- TradeDoubler site verification 1728633 -->
 <?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
-<?php /* -- LESS CSS -- */
-  require "lib/lessphp/lessc.inc.php";
-  $less = new lessc;
-  //$less->checkedCompile(get_stylesheet_directory().'/style.less', get_stylesheet_directory().'/style-min.css');
-  $cache = $less->cachedCompile(get_stylesheet_directory().'/de-minimal.less');
-  file_put_contents(get_stylesheet_directory().'/less/compiled/style-min.css', $cache["compiled"]); ?>
-<link rel="stylesheet" href="<?php echo bloginfo('stylesheet_directory')?>/less/compiled/style-min.css" type="text/css" media="all">
-<?php /* -- END LESS CSS -- */ ?>
+<link rel="stylesheet" href="<?php echo bloginfo('stylesheet_directory')?>/style.css" type="text/css" media="all">
 <?php wp_head(); ?>
 <link rel="stylesheet" href="<?php echo bloginfo('stylesheet_directory')?>/tinymce.css" type="text/css" media="screen" />
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
