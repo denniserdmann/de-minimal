@@ -129,9 +129,10 @@ header .header-info {
 }
 #logo {
   margin: 0 auto;
-  padding: 4em 0 1em;
+  padding: 2em 0 1em;
   width: 105px;
   height: 110px;
+  z-index: 9999;
 }
 #logo img {
   display: block;
@@ -740,8 +741,6 @@ body.category-lesezeichen h2 {
 }
 .page #logo {
   position: absolute;
-  z-index: 9999;
-  padding-top: 2em;
 }
 .page .post .entry {
   padding-bottom: 3em;
