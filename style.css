@@ -390,6 +390,8 @@ h1.widgettitle {
   margin-right: 20px;
   margin-top: 10px;
   overflow: hidden;
+}
+#authorbox img {
   border-radius: 500px;
 }
 #authorbox h6 {
