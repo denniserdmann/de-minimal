@@ -116,6 +116,10 @@ body {
   height: auto;
   text-align: center;
 }
+.background > .wp-post-image {
+  text-align: center;
+  margin-top: -182px;
+}
 header .header-info {
   position: absolute;
   z-index: 7000;
@@ -132,10 +136,6 @@ header .header-info {
 }
 #logo img {
   display: block;
-}
-.wp-post-image {
-  text-align: center;
-  margin-top: -182px;
 }
 .entry {
   z-index: 10;
@@ -734,6 +734,7 @@ body.category-lesezeichen h2 {
 }
 .page #logo {
   left: 20%;
+  position: absolute;
 }
 .page .post .entry {
   padding-bottom: 3em;
