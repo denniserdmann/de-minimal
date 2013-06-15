@@ -740,6 +740,8 @@ body.category-lesezeichen h2 {
 }
 .page #logo {
   position: absolute;
+  z-index: 9999;
+  padding-top: 2em;
 }
 .page .post .entry {
   padding-bottom: 3em;
@@ -2178,16 +2180,6 @@ ul.icons li [class*=" icon-"] {
     position: fixed;
     font-size: 1.2em;
   }
-  #logo {
-    top: 45px;
-    position: fixed;
-    z-index: 5000;
-    padding: 0;
-    margin-left: 1.14em;
-  }
-  .single #logo {
-    position: absolute;
-  }
   .entry,
   .cat-description {
     max-width: 78%;
@@ -2262,11 +2254,6 @@ ul.icons li [class*=" icon-"] {
   }
   .logocontainer {
     max-width: 1024px;
-  }
-  .logocontainer #logo img {
-    width: 120px;
-    height: auto;
-    margin-left: -20px;
   }
   .sidebar {
     margin-top: 0.3em;
