@@ -37,8 +37,7 @@ get_header(); ?>
 				 <div class="commentcount">
 				  	&middot; <?php comments_popup_link(__('Kein Kommentar'), __('1 Kommentar'), __('% Kommentare'), __('') ); ?>
 				</div>
-				<?php endif; ?>
-				<?php the_tags('<br><div class="tags">Tags: ',',  ','</div>');  ?>  
+				<?php endif; ?> 
 			</aside>
 			
                     <?php the_content('Lies den Rest des Artikels &raquo;'); ?>

@@ -43,7 +43,6 @@ get_header(); ?>
 			  	&middot; <?php comments_popup_link(__('Kein Kommentar'), __('1 Kommentar'), __('% Kommentare'), __('') ); ?>
 			</div>
 			<?php endif; ?>
-			<?php the_tags('<br><div class="tags">Tags: ',',  ','</div>');  ?>  
 		</aside>
 		
 		<?php the_content('Lies den Rest des Artikels &raquo;'); ?>

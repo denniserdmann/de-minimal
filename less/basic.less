@@ -183,12 +183,14 @@ h6 {
 .search h2,
 .page h1,
 .error404 h1 {
-	margin-bottom: 0.5em;
+	margin-bottom: 0.25em;
 	margin-top: 0;
 	font-weight: bold;
 	font-size: 2em;
 	line-height: 1.4;
 	color:#333;
+	text-align: center;
+	word-wrap: break-word;
 	
 	a {
 		color: #333;
@@ -198,6 +200,10 @@ h6 {
 .single h2 {
 	font-size: 1.2em;
 }
+
+h2.linktipp {
+	text-align: left;
+}
 /* end HEADLINES */
 
 .sidebar, .tagcloud {
@@ -205,9 +211,19 @@ h6 {
 	text-align: center;
 	font-style: italic;
 	font-size: 0.875em;
-}
-.nopadding .sidebar {
-	display: none;
+	text-align: center;
+	margin-top: 0em;
+	margin-bottom: 1.5em;
+		
+	.clearfix;
+
+	& > div {
+		display: inline-block;
+	}
+
+	a {
+		text-decoration: none;
+	}
 }	
 
 .bildbeschreibung {
