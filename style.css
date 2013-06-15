@@ -2067,6 +2067,10 @@ ul.icons li [class*=" icon-"] {
   .search h2 {
     font-size: 1.5em;
     word-wrap: break-word;
+    text-align: center;
+  }
+  h2.linktipp {
+    text-align: left;
   }
   a.menu-open {
     position: relative;
@@ -2143,11 +2147,17 @@ ul.icons li [class*=" icon-"] {
 }
 @media screen and (min-width: 480px) {
   body {
-    font-size: 112.5%;
+    font-size: 125%;
+  }
+  .single h1,
+  .home h2,
+  .archive h2,
+  .search h2 {
+    font-size: 2em;
   }
   .entry,
   .cat-description {
-    max-width: 68%;
+    max-width: 78%;
     margin: 0 auto;
   }
   .two-column {
@@ -2162,7 +2172,7 @@ ul.icons li [class*=" icon-"] {
 /* tablets in portrait mode */
 @media screen and (min-width: 768px) {
   body {
-    font-size: 136%;
+    font-size: 150%;
   }
   a.menu-open {
     position: fixed;
@@ -2180,8 +2190,7 @@ ul.icons li [class*=" icon-"] {
   }
   .entry,
   .cat-description {
-    max-width: 68%;
-    padding-left: 20px;
+    max-width: 78%;
   }
   .nopadding .entry {
     padding-left: 0px;
@@ -2201,8 +2210,8 @@ ul.icons li [class*=" icon-"] {
   .archive h2,
   .search h2,
   .page h1 {
-    font-size: 1.6em;
-    line-height: 1.3;
+    font-size: 2em;
+    line-height: 1.2;
   }
   h1.linktipp,
   h2.linktipp {
@@ -2233,17 +2242,9 @@ ul.icons li [class*=" icon-"] {
 }
 /* tablets in landscape mode */
 @media screen and (min-width: 1024px) {
-  .single h1,
-  .home h2,
-  .archive h2,
-  .search h2 {
-    font-size: 1.8em;
-  }
   .entry,
   .cat-description {
-    max-width: 640px;
-    padding-left: 25px;
-    padding-right: 25px;
+    max-width: 730px;
   }
 }
 /* standard laptop screens */
@@ -2255,14 +2256,9 @@ ul.icons li [class*=" icon-"] {
   .home h2,
   .archive h2,
   .search h2 {
-    letter-spacing: -0.04em;
+    letter-spacing: -0.03em;
     line-height: 1.25;
-  }
-  .entry,
-  .cat-description {
-    max-width: 730px;
-    padding-left: 20px;
-    margin: 0 auto;
+    font-size: 2.25em;
   }
   .logocontainer {
     max-width: 1024px;
