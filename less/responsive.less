@@ -29,9 +29,8 @@
 
 	.sidebar, .tagcloud {
 		margin-left: 0;
-		text-align: left;
+		text-align: center;
 		width: 100%;
-		float: none;
 	}
 	
 	.sidebar {
@@ -42,24 +41,11 @@
 		.clearfix;
 	
 		& > div {
-			float: left;
-		}
-	
-		& > div:after {
-			content: ',';
-			margin-right: 0.4em;
-		}
-		
-		& > div:last-child:after {
-			content: '';
+			display: inline-block;
 		}
 	
 		a {
 			text-decoration: none;
-		}
-		
-		br {
-			display: none;
 		}
 	}
 	
@@ -166,14 +152,7 @@
 	}
 	h1.linktipp, h2.linktipp {
 		text-indent: -40px;
-	}
-	code {
-		font-size: 1em;
-	}
-	.background {
-		background-position: 220px bottom;
-	}
-		
+	}	
 	.column50 {
 		-moz-column-count: 2;
 		-webkit-column-count: 2;

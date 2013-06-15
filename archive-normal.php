@@ -4,25 +4,27 @@
  * @subpackage DE-Minimal
  */
 get_header(); ?>
-<?php if (category_description( get_category_by_slug('category-slug')->term_id )): ?>
- <div class="cat-description">
-  <h1>Kategorie: <?php single_cat_title(); ?></h1>
- <?php echo category_description( get_category_by_slug('category-slug')->term_id ); ?> 
- </div>
- <?php endif; ?>
 <?php if (have_posts()) : ?>
 <?php $count = 1 ?>
 <?php while(have_posts()) : the_post(); ?>
 <?php $einruecken = get_post_meta($post->ID, "standard", true); ?>
 <article id="post-<?php the_ID(); ?>" class="post <?php if (($einruecken=="") and (in_category( 'magazine' ))) echo 'nopadding'; ?>" >
 	<div class="background">
+	
 	<?php if ($count == 1): ?>
 		<div id="logo">
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php bloginfo( 'name' ); ?>">
 				<img src="<?php echo bloginfo('stylesheet_directory')?>/images/dennis-circle-2x.png" width="105" height="110" />
 			</a>
 		</div>
+		<?php if (category_description( get_category_by_slug('category-slug')->term_id )): ?>
+			 <div class="cat-description">
+			  <h1>Kategorie: <?php single_cat_title(); ?></h1>
+			 <?php echo category_description( get_category_by_slug('category-slug')->term_id ); ?> 
+			 </div>
+		<?php endif; ?>
 	<?php endif; ?>
+	
 	<div class="entry">
 	<?php if (is_linked_list()): ?>
 		<h2 class="<?php the_ID(); ?> linktipp">
@@ -34,16 +36,16 @@ get_header(); ?>
 			<a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
 		</h2>
 	<?php endif; ?>
-		<aside class="sidebar">
-			<div class="date"><i class="icon-calendar"></i> <?php the_time('j. F Y') ?></div>
-			<?php // if comments exists ?>
+		
+		<aside class="sidebar"><div class="date"><?php the_time('j. F Y') ?></div>
 			<?php if (get_comments_number()>=1 ) : ?>
-			<div class="commentcount">
-				<i class="icon-comments"></i> <?php comments_popup_link(__('Kein Kommentar'), __('1 Kommentar'), __('% Kommentare'), __('') ); ?>
+			 <div class="commentcount">
+			  	&middot; <?php comments_popup_link(__('Kein Kommentar'), __('1 Kommentar'), __('% Kommentare'), __('') ); ?>
 			</div>
 			<?php endif; ?>
-			 <?php the_tags('<div class="tags">Tags: ',',  ','</div>');  ?>  
+			<?php the_tags('<br><div class="tags">Tags: ',',  ','</div>');  ?>  
 		</aside>
+		
 		<?php the_content('Lies den Rest des Artikels &raquo;'); ?>
 			<?php if (is_linked_list()): ?>
 				<p><a class="button" href="<?php the_linked_list_link(); ?>" title="<?php the_title_attribute(); ?>">
