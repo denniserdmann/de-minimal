@@ -23,6 +23,7 @@ body {
 	> img {
 		max-width: 100%;
 		height: auto;
+		text-align: center;
 	}
 }
 
@@ -31,26 +32,26 @@ header .header-info {
 	z-index: 7000;
 }
 
-.logocontainer {
-	max-width: 940px;
-	margin: 0 auto;
-	height: auto;
-	overflow: visible;
-	left: 0;
-	position: relative;
-}
-
 #logo {
 	margin: 0 auto;
 	padding: 2em 0 1em;
 	width: 105px;
 	height: 110px;
-	z-index: 9999;
+	z-index: 500;
+	position: relative;
+	left: 50%;
+	margin-left: -52px;
 	
 	
 	img {
 		display: block;
 	}
+}
+
+//IMAGE ABOVE ENTRY
+.wp-post-image {
+	text-align: center;
+	margin-top: -182px;
 }
 
 .entry {
@@ -195,11 +196,8 @@ h6 {
 /* end HEADLINES */
 
 .sidebar, .tagcloud {
-	margin-left: -14.28em;
-	width: 12.85em;
-	float: left;
 	color: #7f7f7f;
-	text-align: right;
+	text-align: center;
 	font-style: italic;
 	font-size: 0.875em;
 }

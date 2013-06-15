@@ -16,6 +16,13 @@ get_header(); ?>
 <?php $einruecken = get_post_meta($post->ID, "standard", true); ?>
 <article id="post-<?php the_ID(); ?>" class="post <?php if (($einruecken=="") and (in_category( 'magazine' ))) echo 'nopadding'; ?>" >
 	<div class="background">
+	<?php if ($count == 1): ?>
+		<div id="logo">
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php bloginfo( 'name' ); ?>">
+				<img src="<?php echo bloginfo('stylesheet_directory')?>/images/dennis-circle-2x.png" width="105" height="110" />
+			</a>
+		</div>
+	<?php endif; ?>
 	<div class="entry">
 	<?php if (is_linked_list()): ?>
 		<h2 class="<?php the_ID(); ?> linktipp">

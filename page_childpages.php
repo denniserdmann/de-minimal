@@ -10,14 +10,19 @@ get_header(); ?>
 <div class="wrapper">
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 	<div class="background">
-			<div class="headerimage">
-				<?php the_post_thumbnail(); ?>
-				
-				<div id="hgroup">
-					<h1><?php the_title(); ?></h1>
-					<?php if (function_exists('the_subheading')) { the_subheading('<h2>', '</h2>'); } ?>							
-				</div>
+		<div id="logo">
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php bloginfo( 'name' ); ?>">
+				<img src="<?php echo bloginfo('stylesheet_directory')?>/images/dennis-circle-2x.png" width="105" height="110" />
+			</a>
+		</div>
+		<div class="headerimage">
+			<?php the_post_thumbnail(); ?>
+			
+			<div id="hgroup">
+				<h1><?php the_title(); ?></h1>
+				<?php if (function_exists('the_subheading')) { the_subheading('<h2>', '</h2>'); } ?>							
 			</div>
+		</div>
 	</div>
 	<div class="entry">
 		<?php the_content('<p class="serif">Read the rest of this page &raquo;</p>'); ?>

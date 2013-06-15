@@ -94,11 +94,4 @@ $background = get_post_meta($post->ID, "hintergrund", true);
 		<?php wp_nav_menu( array('menu' => 'Headermenü', 'container' => false, 'menu_class' => 'nav_header' )); ?>
 		<?php get_search_form(); // hier die Suche formatieren ?>
 	</nav>
-	<div class="logocontainer">
-		<div id="logo">
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php bloginfo( 'name' ); ?>">
-				<img src="<?php echo bloginfo('stylesheet_directory')?>/images/dennis-circle-2x.png" width="105" height="110" />
-			</a>
-		</div>
-	</div>
 </header>

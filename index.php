@@ -11,7 +11,15 @@ get_header(); ?>
 			  <?php $einruecken = get_post_meta($post->ID, "standard", true); ?>
 			<article id="post-<?php the_ID(); ?>" class="post<?php if ($count == 1) echo ' first' ?>">
 			<div class="background">
-			  <div class="entry">
+			<?php if ($count == 1): ?>
+				<div id="logo">
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php bloginfo( 'name' ); ?>">
+						<img src="<?php echo bloginfo('stylesheet_directory')?>/images/dennis-circle-2x.png" width="105" height="110" />
+					</a>
+				</div>
+			<?php endif; ?>
+
+			<div class="entry">
 <?php if (is_linked_list()): ?>
   <h2 class="<?php the_ID(); ?> linktipp"><a style="color: #B33333" href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>">&#9733;</a> <a href="<?php the_linked_list_link(); ?>" title="<?php printf( esc_attr__( 'Link to %s', 'twentyten' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 
