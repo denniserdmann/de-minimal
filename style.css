@@ -2126,9 +2126,6 @@ ul.icons li [class*=" icon-"] {
     max-width: 100%;
     height: auto;
   }
-  code {
-    font-size: 0.8em;
-  }
   .nav_footer > li {
     width: 50%;
   }
