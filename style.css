@@ -131,8 +131,6 @@ header .header-info {
   height: 110px;
   z-index: 500;
   position: relative;
-  left: 50%;
-  margin-left: -52px;
 }
 #logo img {
   display: block;
