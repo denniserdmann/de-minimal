@@ -2550,6 +2550,12 @@ a .icon-flip-vertical:before {
     column-count: 1;
     column-gap: 30px;
   }
+  .page #hgroup h1 {
+    font-size: 2em;
+  }
+  .page #hgroup h2 {
+    font-size: 1.25em;
+  }
 }
 @media screen and (min-width: 480px) {
   body {
@@ -2573,6 +2579,12 @@ a .icon-flip-vertical:before {
     -webkit-column-gap: 0px;
     column-count: 1;
     column-gap: 40px;
+  }
+  .page #hgroup h1 {
+    font-size: 2.25em;
+  }
+  .page #hgroup h2 {
+    font-size: 1.25em;
   }
 }
 /* tablets in portrait mode min-768 = 48em */
@@ -2628,6 +2640,12 @@ a .icon-flip-vertical:before {
   }
   .nav_footer > li {
     width: 25%;
+  }
+  .page #hgroup h1 {
+    font-size: 3.75em;
+  }
+  .page #hgroup h2 {
+    font-size: 1.75em;
   }
 }
 /* tablets in landscape mode min-width: 936px = 58.5em  */
