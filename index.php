@@ -14,7 +14,7 @@ get_header(); ?>
 			<?php if ($count == 1): ?>
 				<div id="logo">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php bloginfo( 'name' ); ?>">
-						<img src="<?php echo bloginfo('stylesheet_directory')?>/images/dennis-circle-2x.png" width="105" height="110" />
+						<img src="<?php echo bloginfo('stylesheet_directory')?>/images/dennis-circle-2x.png" width="105" />
 					</a>
 				</div>
 			<?php endif; ?>
