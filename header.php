@@ -63,22 +63,26 @@ $background = get_post_meta($post->ID, "hintergrund", true);
 <!-- Stylesheet Schleife -->
 	<style type=text/css>
 	  .single #post-<?php echo $post->ID ?> h1,
-	.home #post-<?php echo $post->ID ?> h2,
-	.archive #post-<?php echo $post->ID ?> h2
-	.search #post-<?php echo $post->ID ?> h2,
+	.home #post-<?php echo $post->ID ?> h2 a,
+	.archive #post-<?php echo $post->ID ?> h2 a
+	.search #post-<?php echo $post->ID ?> h2 a,
 	.page #post-<?php echo $post->ID ?> h1,
 	.page #post-<?php echo $post->ID ?> h2,
-	.category #post-<?php echo $post->ID ?> h2 a  {<?php echo $headline; ?> }
+	.category #post-<?php echo $post->ID ?> h2 a { <?php echo $headline; ?> }
 	  <?php if($linkcolor): ?>
-	 	 #post-<?php echo $post->ID ?> a, .commentlist a {color: #<?php echo $linkcolor; ?>; }
+	 	 #post-<?php echo $post->ID ?> p a,
+	 	 #post-<?php echo $post->ID ?> ul a,
+	 	 #post-<?php echo $post->ID ?> div > a,
+	 	 .commentlist a {color: #<?php echo $linkcolor; ?>; }
 	 	 #post-<?php echo $post->ID ?> p a:hover { background: #<?php echo $linkcolor; ?>; color: #fff; }
 	  <?php endif; ?>
 	  .postid-<?php echo $post->ID ?> .background,
 	  #post-<?php echo $post->ID ?> .background,
 	  .page #post-<?php echo $post->ID ?> .background { <?php echo $background; ?>}
+	  .logocolor { fill: #<?php echo $linkcolor; ?>;}
 	</style> 
 <?php endif; ?>
-<!-- end Stylesheet-Schleife --> 
+<!-- end Stylesheet-Schleife -->
  <?php endwhile; ?>
  <?php // Reset Query
  wp_reset_query();
