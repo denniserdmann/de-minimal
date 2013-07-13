@@ -284,6 +284,7 @@ h2.linktipp {
 .sidebar,
 .tagcloud {
   color: #7f7f7f;
+  color: rgba(0, 0, 0, 0.5);
   font-style: italic;
   font-size: 0.875em;
   text-align: center;
