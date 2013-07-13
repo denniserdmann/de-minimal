@@ -13,13 +13,17 @@ add_theme_support( 'post-formats', array( 'aside', 'gallery','link','image','quo
 function new_excerpt_more($more) {
 return ' &hellip; <a href="'. get_permalink($post->ID) . '">' . 'Artikel&nbsp;lesen&nbsp;&raquo;' . '</a>';
 }
+// Activate Excerpts for Pages
+add_action('init', 'my_custom_excerpt');
+	function my_custom_excerpt() {
+		add_post_type_support( 'page', 'excerpt' );
+	}
 add_filter('excerpt_more', 'new_excerpt_more');
 function new_excerpt_length($length) {
 	return 20;
 }
 add_filter('excerpt_length', 'new_excerpt_length');
 ?>
-
 <?php /* Don't jump to #more on detail pages */
 function remove_more_jump_link($link) { 
 	$offset = strpos($link, '#more-');
@@ -74,8 +78,29 @@ if ( function_exists( 'add_filter' ) ) {
 <?php // Menu-Support in Theme
 function register_my_menus() {
   register_nav_menus(
-    array( 'footer-menu' => __( 'Footer Menu' ) )
-  );
+    array( 'footer-menu' => __( 'Footer Menu' ),
+    		'header-menu' => __( 'Header Menu')
+  ));
 }
 add_action( 'init', 'register_my_menus' );
 ?>
+<?php // Open Graph Protocol set image
+function catch_that_image() {
+	global $post, $posts;
+	$first_img = '';
+	ob_start();
+	ob_end_clean();
+	$output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
+	$first_img = $matches [1] [0];
+	if(empty($first_img)){
+			//Defines a default image
+			$first_img = bloginfo('stylesheet_directory')."/images/dennis-circle-2x.png";
+		}
+	return $first_img;
+}
+//
+// add h2 tag for subheading
+add_filter( 'subheading_tags', function( $tags ) {
+    $tags['br'] = array();
+    return $tags;
+} ); ?>

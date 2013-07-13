@@ -1,7 +1,5 @@
-/**
- * @package WordPress
- * @subpackage DE-Minimal
- */
+//	@package WordPress
+//	@subpackage DE-Minimal
  
 /* BASIC */
 
@@ -12,7 +10,6 @@ html, body {
 body {
  	background-color: #fbfbfb;
  	color:#333;
- 	padding:0px;
 	width: 100%;
 	font: 112.5%/1.6 "ff-tisa-web-pro-1","ff-tisa-web-pro-2",serif;
 	font-weight: 400;
@@ -22,22 +19,33 @@ body {
 	padding-top: 0px;
 	padding-bottom: 0px;
 	position: relative;
+	
+	> img {
+		max-width: 100%;
+		height: auto;
+		text-align: center;
+	}
+	
+	//IMAGE ABOVE ENTRY
+	> .wp-post-image {
+		display: block;
+		margin: 0 auto;
+		margin-top: -182px;
+	}
 }
 
-header {
-	max-width: 940px;
-	margin: 0 auto;
-	height: auto;
-	overflow: visible;
-	left: 0;
-	position: relative;
+header .header-info {
+	position: absolute;
+	z-index: 7000;
 }
 
 #logo {
-	margin: 60px auto;
-	margin-top: 60px;
+	margin: 0 auto;
+	padding: 2em 0 1em;
 	width: 105px;
 	height: 110px;
+	z-index: 500;
+	position: relative;
 	
 	img {
 		display: block;
@@ -127,11 +135,16 @@ header {
 /* HEADLINES */
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: "Helvetica Neue",Helvetica,"pragmatica-web",Arial,sans-serif;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 	font-weight: 700;
 	font-size: 1em;
-	letter-spacing: -0.04em;
+	letter-spacing: -0.02em;
 	margin-top: 20px;
+	
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
 }
 
 h1 {
@@ -168,12 +181,14 @@ h6 {
 .search h2,
 .page h1,
 .error404 h1 {
-	margin-bottom: 0.5em;
+	margin-bottom: 0.25em;
 	margin-top: 0;
 	font-weight: bold;
 	font-size: 2em;
 	line-height: 1.4;
 	color:#333;
+	text-align: center;
+	word-wrap: break-word;
 	
 	a {
 		color: #333;
@@ -183,19 +198,30 @@ h6 {
 .single h2 {
 	font-size: 1.2em;
 }
+
+h2.linktipp {
+	text-align: left;
+}
 /* end HEADLINES */
 
 .sidebar, .tagcloud {
-	margin-left: -14.28em;
-	width: 12.85em;
-	float: left;
 	color: #7f7f7f;
-	text-align: right;
+	text-align: center;
 	font-style: italic;
-	font-size: 0.63em;
-}
-.nopadding .sidebar {
-	display: none;
+	font-size: 0.875em;
+	text-align: center;
+	margin-top: 0em;
+	margin-bottom: 1.5em;
+		
+	.clearfix;
+
+	& > div {
+		display: inline-block;
+	}
+
+	a {
+		text-decoration: none;
+	}
 }	
 
 .bildbeschreibung {
@@ -277,19 +303,10 @@ footer {
 
 /* ENDE FOOTER */
 
-h2.error404 {
-	width:480px;
-	height:160px;
-	display:block;
-	margin-top: 30px;
-	margin-left: 10px;
-	background: url(tl_files/denniserdmann/error404.png) no-repeat 0px 0px;
-	text-indent:-9999px;
-}
-
 h1.widgettitle {
 	display: none;
-	}
+}
+
 .brake {
 	clear: both;
 	display: none;
@@ -306,31 +323,13 @@ h1.widgettitle {
 	overflow: hidden;
 	position: relative;
 	float: left;
+	
 	img{
 		top: 0;
 		left: 0;
 		margin: 0 auto;
 		border: 0;
 	}
-}
-
-.boxcaption{ 
-	float: left; 
-	position: absolute; 
-	background: #fff; 
-	height: 115px; 
-	width: 100%; 
-	opacity: 0.9; 
-	/* For IE 5-7 */
- 	filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
-	/* For IE 8 */
- 	-MS-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
-	padding-top: 10px;
-}
- 				
-.caption .boxcaption {
-	top: 110px;
-	left: 0;
 }
 
 #authorbox {
@@ -348,6 +347,9 @@ h1.widgettitle {
 		margin-right: 20px;
 		margin-top: 10px;
 		overflow: hidden;
+	}
+	
+	img {
 		border-radius: 500px;
 	}
 		

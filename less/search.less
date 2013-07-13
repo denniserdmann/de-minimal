@@ -1,0 +1,84 @@
+//	@package WordPress
+//	@subpackage DE-Minimal
+
+/* SEARCH */
+	
+.searchform {
+	margin: 0 auto;
+	max-width: 20em;
+	border-top: 0.1em solid #fff;
+	margin-top: 1em;
+	padding-top: 2em;
+	text-align: center;
+	
+	fieldset {
+		border: 0;
+		margin: 0;
+		padding: 0;
+	}
+
+	input {
+	
+		font-size: 1em;
+		background: #fff;
+		border: 0;
+		color: #444;
+		padding: 0.2em .5em;	
+/* 		float: left; */
+		max-width: 15em;
+		
+		-moz-border-radius-topleft: 5px;
+		-webkit-border-top-left-radius: 5px;
+		border-top-left-radius: 5px;
+		-moz-border-radius-bottomleft: 5px;
+		-webkit-border-bottom-left-radius: 5px;
+		border-bottom-left-radius: 5px;
+		
+		-moz-border-radius-topright: 0px;
+		-webkit-border-top-right-radius: 0px;
+		border-top-right-radius: 0px;
+		-moz-border-radius-bottomright: 0px;
+		-webkit-border-bottom-right-radius: 0px;
+		border-bottom-right-radius: 0px;
+		font-family: @textFont;
+	}
+	
+	button {
+		color: white;
+		padding: 0.2em 1em; 
+/* 		float: left; */
+		font-size: 1em;
+		margin-left: -0.25em;
+		font-family: @textFont;
+		border: none;
+	
+		-moz-border-radius-topright: 5px;
+		-webkit-border-top-right-radius: 5px;
+		border-top-right-radius: 5px;
+		-moz-border-radius-bottomright: 5px;
+		-webkit-border-bottom-right-radius: 5px;
+		border-bottom-right-radius: 5px;
+		
+		background: #222; 
+		background-image: -moz-linear-gradient(top, rgba(90,90,90, 0.9), rgba(34,34,34, 1)); /* Firefox */
+		background: -webkit-gradient(linear, left top, left bottom, from(rgba(90,90,90, 0.9)), to(#222)); /* Safari, Chrome */
+		
+		span {
+			display: none;
+		}
+	}
+	
+	label {
+		display: none;
+	}
+	
+	#searchform:after {
+		content: ".";
+		display: block;
+		clear: both;
+		visibility: hidden;
+		line-height: 0;
+		height: 0;	
+	}
+}
+/* SEARCH END */

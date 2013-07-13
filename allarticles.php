@@ -12,8 +12,7 @@ get_header();?>
 		
 		<div class="entry">
 				<h1>Alle Artikel</h1>
-				<?php get_search_form(); // hier die Suche formatieren ?>
-				
+								
 				<?php if ( function_exists('wp_tag_cloud') ) : ?>
         		<div class="tagcloud">
             		<h4>Meine Tags</h4>
@@ -74,9 +73,7 @@ get_header();?>
 		}
 		get_search_form();
 
-	endif; ?>
-	
-	
+	endif; ?>	
 </div>
 </div>
 <?php get_footer(); ?>

@@ -1,13 +1,64 @@
-/**
- * @package WordPress
- * @subpackage DE-Minimal
- */
+//	@package WordPress
+//	@subpackage DE-Minimal
  
 /* PAGE Style */
 
 .page {
 	.background {
-		 background: #DDE7F2;
+		 background: #fbfbfb;
+	}
+	
+	#logo {
+		left: 10%;
+		position: absolute;
+	}
+	
+	.post .entry { 
+		padding-bottom: 3em;
+		margin-bottom: 1em;
+		border-bottom: 1px solid #ccc;
+	}
+	
+	.post:last-of-type .entry {
+
+		border-bottom: 0;
+	}
+	
+	.headerimage { // Post Thumbnail Styling
+		text-align: center;
+		position: relative;
+		min-height: 7.5em;
+		
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+	}
+	
+	#hgroup {
+		text-align: center;
+		position: absolute;
+		bottom: 10%;
+		width: 100%;
+		
+		h1 {
+			font-size: 3.75em;
+			line-height: 1.1;
+			margin-bottom: 0.125em;
+		}
+		h2 {
+			color: rgba(255,255,255,0.9);
+			font-size: 1.75em;
+			line-height: 1.3;
+			margin-bottom:0;
+			font-family: @textFont;
+		}
+	}
+	
+	h2 {
+		font-size: 2em;
+		text-align: center;
+		margin-bottom: .75em;
 	}
 	
 	.blase {

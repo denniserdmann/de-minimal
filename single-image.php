@@ -23,6 +23,5 @@
  </div>
  </div> <!-- end entry -->
 </div> <!-- end background -->
-	
 </article>
 <?php get_footer(); ?>

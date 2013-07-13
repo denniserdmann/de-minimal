@@ -23,13 +23,14 @@ get_header(); ?>
 				<a href="<?php the_permalink() ?>" title="<?php the_title(); ?>">
 				<div class="inside">
                     <?php  the_content('Lies den Rest des Artikels &raquo;'); ?>
-                    <h2 class="<?php the_ID(); ?>"><?php the_title(); ?></h2>
+                    <div class="headline">
+                    	<h2 class="<?php the_ID(); ?>"><?php the_title(); ?></h2>
+                    </div>
 				</div><!-- end inside -->
 				</a>
 		</article> <!-- ende id artikel -->
 		<?php endwhile; ?>
-				<?php wp_pagenavi(); ?>
-		
+				<?php wp_pagenavi(); ?>	
 		<?php wp_reset_query(); ?>
 
 		</div><!-- end row -->
@@ -48,6 +49,5 @@ get_header(); ?>
 			echo("<h2 class='center'>No posts found.</h2>");
 		}
 		get_search_form();
-	endif;
-?>
+	endif; ?>
 <?php get_footer(); ?>

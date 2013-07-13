@@ -1,57 +1,28 @@
-/*! MEDIA QUERIES */
+//	@package WordPress
+//	@subpackage DE-Minimal
 
 /* smartphones in Portrait mode */
+
 @media screen and (min-width: 320px) {
 
 	body {
 		font-size: 100%;
 	}
-		
+			
 	.single h1,
 	.home h2,
 	.archive h2,
 	.search h2 {
-		font-size: 1.5em;
-		word-wrap: break-word;
+		font-size: 1.6em;
 	}
-	
-	.sidebar, .tagcloud {
-		margin-left: 0;
-		text-align: left;
-		width: 100%;
-		float: none;
-	}
-	
-	.sidebar {
-		padding: 0.3em;
-		margin-top: 0.2em;
-		margin-bottom: 0.5em;
-	
-		& > div {
-			float: left;
-		}
-	
-		.date:after,
-		.category:after,
-		.commentcount:after {
-			content: ',';
-			margin-right: 0.4em;
-		}
-	
-		p a {
-			text-decoration: none;
-		}
 		
-		br {
-			display: none;
-		}
-		
-		.clearfix;
+	a.menu-open {
+		 position: relative;
+		 font-size: 2em;
 	}
 	
-
 	.entry, .cat-description {
-		max-width: 90%;
+		max-width: 86%;
 		padding-left: 0;
 		padding-right: 0;
 	}
@@ -65,13 +36,6 @@
 		height: auto;
 	}
 	
-	code {
-		font-size: 0.8em;
-	}
-	
-	.nav_footer {
-		width: 80%;
-	}
 	.nav_footer  > li {
 		width: 50%;
 	}
@@ -90,16 +54,32 @@
 		column-count: 1;
 		column-gap: 30px;
 	}
+	
+	.page #hgroup {
+		h1 {
+			font-size: 2em;
+		}
+		h2 {
+			font-size: 1.25em;
+		}
+	}
 }
 
 @media screen and (min-width: 480px) {
 
 	body {
-		font-size: 112.5%;
+		font-size: 125%;
+	}
+	
+	.single h1,
+	.home h2,
+	.archive h2,
+	.search h2 {
+		font-size: 2em;
 	}
 	
 	.entry, .cat-description {
-		max-width: 432px;
+		max-width: 78%;
 		margin: 0 auto;
 	}
 	.two-column {
@@ -110,34 +90,31 @@
 		column-count: 1;
 		column-gap: 40px;
 	}
-	.nav_footer  > li {
-		width: 33%;
-	}	
+	
+	.page #hgroup {
+		h1 {
+			font-size: 2.25em;
+		}
+		h2 {
+			font-size: 1.25em;
+		}
+	}
 }
 
-
-
-/* tablets in portrait mode */
-@media screen and (min-width: 768px) {
+/* tablets in portrait mode min-768 = 48em */
+@media screen and (min-width: 48em) {
 
 	body {
-		font-size: 136%;
+		font-size: 150%;
 	}
-		
-	#logo {
-		top: 45px;
-		position: fixed;
-		z-index: 5000;
-		margin: 0;
-		margin-left: 25px;
-	}
-	.single #logo {
-		position: absolute;
+	
+	a.menu-open {
+		 position: fixed;
+		 font-size: 1.2em;
 	}
 			
 	.entry, .cat-description {
-		max-width: 68%;
-		padding-left: 20px;
+		max-width: 78%;
 	}
 	
 	.nopadding .entry {
@@ -160,22 +137,12 @@
 	.archive h2,
 	.search h2,
 	.page h1 {
-		font-size: 1.6em;
-		line-height: 1.3;
-	}
-	.sidebar, .tagcloud {
-		border: none;
+		font-size: 2em;
+		line-height: 1.2;
 	}
 	h1.linktipp, h2.linktipp {
 		text-indent: -40px;
-	}
-	code {
-		font-size: 1em;
-	}
-	.background {
-		background-position: 220px bottom;
-	}
-		
+	}	
 	.column50 {
 		-moz-column-count: 2;
 		-webkit-column-count: 2;
@@ -187,91 +154,43 @@
 		float: left;
 	}
 	.nav_footer {
-		width: 80%;
-	
-		&  > li {
+		padding-left: 0;
+		
+		& > li {
 			width: 25%;
+		}	
+	}
+	
+	.page #hgroup {
+		h1 {
+			font-size: 3.75em;
 		}
-	}		
-
+		h2 {
+			font-size: 1.75em;
+		}
+	}	
 }
 
-/* tablets in landscape mode */
-@media screen and (min-width: 1024px) {
-
-	.single h1,
-	.home h2,
-	.archive h2,
-	.search h2 {
-		font-size: 1.8em;
-		min-height: 1.8em;
-	}
+/* tablets in landscape mode min-width: 936px = 58.5em  */
+@media screen and (min-width: 58.5em) {
 	
 	.entry, .cat-description {
-		max-width: 640px;
-		padding-left: 25px;
-		padding-right: 25px;
+		max-width: 30.416667em;
 	}
-	.sidebar, .tagcloud {
-		margin-left: -14.28em;
-		float: left;
-		border: none;
-		text-align: right;
-		width: 12.85em;
-		top: 160px;
-		
-	}
-	.sidebar > div {
-		float: right;
-		clear: right;
-	}
-	.sidebar .date:after,
-	.sidebar .category:after,
-	.sidebar .commentcount:after {
-		content: '';
-	}
-	.sidebar br {
-		display: inline;
-	}
-
 }
 /* standard laptop screens */
 @media screen and (min-width: 1200px) {
-
-	body {
-		font-size: 150%;
-	}
 	
 	.single h1,
 	.home h2,
 	.archive h2,
 	.search h2 {
-		letter-spacing: -0.04em;
+		letter-spacing: -0.03em;
 		line-height: 1.25;
-	}
-		
-	.entry, .cat-description {
-		max-width: 730px;
-		padding-left: 20px;
-		margin: 0 auto;
-	}
-	
-	header {
-		max-width: 1024px;
-		
-		#logo img {
-			width: 120px;
-			height: auto;
-			margin-left: -20px;
-		}
-	}
-	
-	.sidebar {
-		margin-top: 0.3em;
+		font-size: 2.25em;
 	}
 }
 
 /* bigger desktop screens */
-@media screen and (min-width: 1440px) {
-
-}
+// @media screen and (min-width: 1440px) {
+// }
