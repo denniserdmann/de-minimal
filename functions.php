@@ -103,4 +103,12 @@ function catch_that_image() {
 add_filter( 'subheading_tags', function( $tags ) {
     $tags['br'] = array();
     return $tags;
-} ); ?>
+} );
+//    
+// allow svg upload in media library
+function svg_upload ( $svg_mime ){
+  $svg_mime['svg'] = 'image/svg+xml';
+	return $svg_mime;
+}
+add_filter( 'upload_mimes', 'svg_upload' );
+?>
