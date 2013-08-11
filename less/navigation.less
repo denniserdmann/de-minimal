@@ -3,22 +3,29 @@
  
 /* HEADER NAV */
  
- a.menu-open {
-	 color: #333;
-	 width: 1.2em;
-	 text-align: center;
-	 padding: 0 0.1em;
-	 display: block;
-	 position: fixed;
-	 left: 0; 
-	 top: 0;
-	 font-size: 1.2em;
-	 line-height: 1.2;
-	 
-	.icon-remove {
-		display: none;
-		color: #fff;
-	}
+ 
+.header-info a {
+	color: #333;
+	color: rgba(0,0,0,0.75);
+	width: 1.2em;
+	text-align: center;
+	padding: 0 0.125em 0em;
+	display: block;
+	float: left;
+	font-size: 1.2em;
+	line-height: 1.25;
+
+}
+a.menu-open .icon-remove {
+	display: none;
+	color: #fff;
+}
+
+a.rss-feed {
+	float: left;
+	display: block;
+	width: 1.2em;
+	text-align: center;
 }
 	 
 header nav {
@@ -93,6 +100,11 @@ header nav {
 	 a.menu-open .icon-remove {
 		 display: inline;
 	 }
+	 
+	 .search-open,
+	 .rss-feed {
+		color: #fff;
+	}
 }
  
  /* FOOTER NAV */
