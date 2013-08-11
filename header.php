@@ -92,10 +92,12 @@ $background = get_post_meta($post->ID, "hintergrund", true);
 <header>
 	<div class="header-info">
 		<a class="menu-open" id="offCanvasToggler" href="#"><i class="icon-reorder"></i><i class="icon-remove"></i></a>
+		<a class="search-open" id="searchToggler" href="#"><i class="icon-search"></i></a>
+	</div>
+	<div class="searchbar">
+		<?php get_search_form(); // hier die Suche formatieren ?>
 	</div>
 	<nav>
-		<h1>Menü</h1>
 		<?php wp_nav_menu( array('menu' => 'Headermenü', 'container' => false, 'menu_class' => 'nav_header' )); ?>
-		<?php get_search_form(); // hier die Suche formatieren ?>
 	</nav>
 </header>

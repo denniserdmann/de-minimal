@@ -36,7 +36,7 @@ get_header(); ?>
 			<a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
 		</h2>
 	<?php endif; ?>
-		
+	<?php if (!is_linked_list()): ?>
 		<aside class="sidebar"><div class="date"><?php the_time('j. F Y') ?></div>
 			<?php if (get_comments_number()>=1 ) : ?>
 			 <div class="commentcount">
@@ -44,7 +44,7 @@ get_header(); ?>
 			</div>
 			<?php endif; ?>
 		</aside>
-		
+	<?php endif; ?>
 		<?php the_content('Lies den Rest des Artikels &raquo;'); ?>
 			<?php if (is_linked_list()): ?>
 				<p><a class="button" href="<?php the_linked_list_link(); ?>" title="<?php the_title_attribute(); ?>">

@@ -34,9 +34,10 @@ body {
 	}
 }
 
-header .header-info {
-	position: absolute;
+.header-info {
+	position: fixed;
 	z-index: 7000;
+	right: 0.25em;
 }
 
 #logo {
@@ -296,11 +297,17 @@ img.border {
 	
 /* FOOTER */
 
-footer {
-	padding-top: 20px;	
+footer {	
 	background-color: #222;
-	padding-bottom: 10px;
+	padding: 2em 0;
 	z-index: 120;
+	text-align: center;
+	font-size: 0.75em;
+	
+	a {
+		color: #fff;
+		text-decoration: none;
+	}
 }
 
 /* ENDE FOOTER */
