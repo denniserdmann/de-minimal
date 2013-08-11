@@ -483,13 +483,6 @@ h1.widgettitle {
 }
 a.menu-open .icon-remove {
   display: none;
-  color: #fff;
-}
-a.rss-feed {
-  float: left;
-  display: block;
-  width: 1.2em;
-  text-align: center;
 }
 header nav {
   color: #fff;
@@ -559,8 +552,7 @@ header nav li a:after {
 .offCanvas a.menu-open .icon-remove {
   display: inline;
 }
-.offCanvas .search-open,
-.offCanvas .rss-feed {
+.offCanvas a {
   color: #fff;
 }
 /* FOOTER NAV */

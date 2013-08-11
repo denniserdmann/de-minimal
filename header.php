@@ -92,7 +92,6 @@ $background = get_post_meta($post->ID, "hintergrund", true);
 <header>
 	<div class="header-info">
 		<a class="menu-open" id="offCanvasToggler" href="#"><i class="icon-reorder"></i><i class="icon-remove"></i></a>
-		<a class="rss-feed" href="<?php bloginfo('rss2_url'); ?>" title="RSS-Feed abonnieren"><i class="icon-rss"></i></a>
 		<a class="search-open" id="searchToggler" href="#"><i class="icon-search"></i></a>
 	</div>
 	<div class="searchbar">
