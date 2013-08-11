@@ -102,35 +102,20 @@ header nav {
 .nav_footer {
 	margin: 0 auto;
 	overflow: hidden;
-	padding: 0;
-	
-	ul {
-		margin: 0;
-	}
 
 	&  > li {
-		float: left;
-		font-size: 16px;
-		width: 25%;
+		display: inline;
 	}
 	
-	li:before {
+	li + li:before {
+		content: '|';
 		color: #fff;
-		width: 1.25em;
 	}
 				
 	li a {
-		margin: 0px;
-		color: #fff;
-		font-family: @textFont;	
-		font-weight: bold;
-	}
-			
-	li ul li {
-		float: none;
-		width: 100%;
-		text-align: left;
-	}
+		margin: 0;
+		padding: 0 0.75em;
+	}		
 }
 
 /* PAGINATION */
