@@ -29,7 +29,7 @@
 <meta name="geo.position" content="54.3160057;10.1241104" />
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.7">
 <!--[if lt IE 9]>
-<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
 <![endif]-->
 <title><?php wp_title('&laquo;', true, 'right'); ?> <?php bloginfo('name'); ?></title>
 <?php // OPEN GRAPH PROTOCOL ?>
@@ -45,7 +45,7 @@
 <link rel="stylesheet" href="<?php echo bloginfo('stylesheet_directory')?>/style.css" type="text/css" media="all">
 <?php wp_head(); ?>
 <link rel="stylesheet" href="<?php echo bloginfo('stylesheet_directory')?>/tinymce.css" type="text/css" media="screen" />
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 <script type="text/javascript" src="<?php echo bloginfo('stylesheet_directory')?>/js/master.js"></script>
 <?php if (is_home()) {
  query_posts( array( 'category__not_in' => array(85), 'category_name' => 'journal,job', 'paged' => get_query_var('paged') ) );
