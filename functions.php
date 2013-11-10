@@ -111,4 +111,17 @@ function svg_upload ( $svg_mime ){
 	return $svg_mime;
 }
 add_filter( 'upload_mimes', 'svg_upload' );
+//
+// Backend CSS Editor Styles
+function de_add_editor_styles() {
+    add_editor_style( 'css/editor-style.css' );
+}
+add_action( 'init', 'de_add_editor_styles' );
+//
+// Add Typekit to Backend (src: http://www.tomjn.com/150/typekit-wp-editor-styles/)
+add_filter("mce_external_plugins", "tomjn_mce_external_plugins");
+function tomjn_mce_external_plugins($plugin_array){
+	$plugin_array['typekit']  =  get_template_directory_uri().'/js/typekit.tinymce.js';
+    return $plugin_array;
+}
 ?>
