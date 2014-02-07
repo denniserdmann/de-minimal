@@ -117,6 +117,23 @@ function de_add_editor_styles() {
     add_editor_style( 'css/editor-style.css' );
 }
 add_action( 'init', 'de_add_editor_styles' );
+
+
+//
+// Add Filter for spans created by Typekit
+add_filter( 'wp_insert_post_data' , 'filter_post_data' , '99', 2 );
+
+function filter_post_data( $data , $postarr ) {
+
+    $content = $data['post_content'];
+
+    $content = preg_replace('#<p.*?>(.*?)</p>#i', '', $content);
+    $content = preg_replace('#<span.*?>BESbswy</span>#i', '', $content);
+
+    $data['post_content'] = $content;
+
+    return $data;
+}
 //
 // Add Typekit to Backend (src: http://www.tomjn.com/150/typekit-wp-editor-styles/)
 add_filter("mce_external_plugins", "tomjn_mce_external_plugins");
