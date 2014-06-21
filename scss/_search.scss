@@ -1,0 +1,113 @@
+//	@package WordPress
+//	@subpackage DE-Minimal
+
+/* SEARCH */
+	
+.searchbar {
+	opacity: 0;
+	position: fixed;
+	top: -100%;
+	right: .25em;
+	padding: 0.5em 0.5em 0.5em 0.5em;
+	background: rgba(0,0,0,0.2);
+
+	   -moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+			border-radius: 5px;
+			
+		-moz-border-radius-topright: 0;
+	-webkit-border-top-right-radius: 0;
+			border-top-right-radius: 0;
+			
+	transition: opacity .2s;
+	-moz-transition: opacity .2s; /* Firefox 4 */
+	-webkit-transition: opacity .2s; /* Safari and Chrome */
+	-o-transition: opacity .2s; /* Opera */
+}
+
+.offSearch {
+
+	.search-open {
+		background: rgba(0,0,0,0.2);
+		color: #fff;
+	}
+	.searchbar {
+		top: 1.5em;
+		opacity: 1;
+		z-index: 6001;
+	}
+}
+
+.searchform {
+	margin: 0 auto;
+	max-width: 12em;
+	text-align: center;
+	
+	form {
+		margin-bottom: 0;
+	}
+	
+	fieldset {
+		border: 0;
+		margin: 0;
+		padding: 0;
+	}
+
+	input {
+	
+		font-size: 1em;
+		background: #fff;
+		border: 0;
+		color: #444;
+		padding: 0.2em .5em;	
+/* 		float: left; */
+		max-width: 10em;
+		
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		border-radius: 5px;
+		
+		font-family: @textFont;
+	}
+	
+	button {
+		color: white;
+		padding: 0.2em 1em; 
+/* 		float: left; */
+		font-size: 1em;
+		margin-left: -0.25em;
+		font-family: @textFont;
+		border: none;
+	
+		-moz-border-radius-topright: 5px;
+		-webkit-border-top-right-radius: 5px;
+		border-top-right-radius: 5px;
+		-moz-border-radius-bottomright: 5px;
+		-webkit-border-bottom-right-radius: 5px;
+		border-bottom-right-radius: 5px;
+		
+		background: #222; 
+		background-image: -moz-linear-gradient(top, rgba(90,90,90, 0.9), rgba(34,34,34, 1)); /* Firefox */
+		background: -webkit-gradient(linear, left top, left bottom, from(rgba(90,90,90, 0.9)), to(#222)); /* Safari, Chrome */
+		
+		span {
+			display: none;
+		}
+		
+		display: none;
+	}
+	
+	label {
+		display: none;
+	}
+	
+	#searchform:after {
+		content: ".";
+		display: block;
+		clear: both;
+		visibility: hidden;
+		line-height: 0;
+		height: 0;	
+	}
+}
+/* SEARCH END */

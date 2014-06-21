@@ -1,0 +1,40 @@
+//	@package WordPress
+//	@subpackage DE-Minimal
+
+/* LESEZEICHEN */
+body.category-lesezeichen {
+	background: #fbfbfb;
+}
+.category-lesezeichen .wrapper, .category-bilder .wrapper {
+	max-width: 730px;
+	margin: 0 auto;
+}
+.category-lesezeichen .row,
+.category-bilder .row {
+	margin-left: -30px;
+	padding-top: 25px;
+}
+
+.category-lesezeichen .row:after,
+.category-bilder .row:after {
+	content: "."; 
+    display: block; 
+    height: 0; 
+    clear: both; 
+    visibility: hidden;
+}
+.category-lesezeichen h1,
+.category-bilder h1 {
+	font-size: 1.8em;
+	padding-top: 1.5em;
+	margin-bottom: 0.5em;
+	color: #444;
+	font-weight: bold;
+}
+ body.category-lesezeichen {
+ 
+	h2 {
+		text-indent: -1.3em;
+		min-height: intrinsic;
+	}
+}
