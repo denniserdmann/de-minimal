@@ -125,7 +125,7 @@ body {
       line-height: 1.6em;
       margin-bottom: 0;
       font-weight: bold; }
-  .entry .more-link {
+  .entry .more-link, .entry .btn {
     background: none;
     border: 0.125em solid #68c4ee;
     display: inline-block;
@@ -137,7 +137,7 @@ body {
     position: relative;
     cursor: pointer;
     margin-top: 15px; }
-    .entry .more-link:hover {
+    .entry .more-link:hover, .entry .btn:hover {
       border-color: #189ed8;
       background-color: #189ed8;
       color: #fff; }
@@ -870,8 +870,8 @@ body.category-lesezeichen h2 {
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url('//netdna.bootstrapcdn.com/font-awesome/4.1.0/fonts/fontawesome-webfont.eot?v=4.1.0');
-  src: url('//netdna.bootstrapcdn.com/font-awesome/4.1.0/fonts/fontawesome-webfont.eot?#iefix&v=4.1.0') format('embedded-opentype'), url('//netdna.bootstrapcdn.com/font-awesome/4.1.0/fonts/fontawesome-webfont.woff?v=4.1.0') format('woff'), url('//netdna.bootstrapcdn.com/font-awesome/4.1.0/fonts/fontawesome-webfont.ttf?v=4.1.0') format('truetype'), url('//netdna.bootstrapcdn.com/font-awesome/4.1.0/fonts/fontawesome-webfont.svg?v=4.1.0#fontawesomeregular') format('svg');
+  src: url('../fonts/fontawesome-webfont.eot?v=4.1.0');
+  src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.1.0') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff?v=4.1.0') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.1.0') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.1.0#fontawesomeregular') format('svg');
   font-weight: normal;
   font-style: normal; }
 

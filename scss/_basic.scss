@@ -105,7 +105,8 @@ body {
 		}
 	}
 	
-	.more-link {
+	.more-link,
+	.btn {
 		@include btn;
 	}
 }
