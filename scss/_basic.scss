@@ -104,6 +104,10 @@ body {
 			font-weight: bold;
 		}
 	}
+	
+	.more-link {
+		@include btn;
+	}
 }
 
 /* IMAGE BORDER WITH SHADOW */

@@ -68,12 +68,13 @@ margin-top: 50px;
 		border: 1px solid #ccc;
 		padding: 6px;
 		width: 90%;
-		font-family: "ff-tisa-web-pro-1","ff-tisa-web-pro-2",serif;
+		font-family: $font-family-base;
 	}
 	
 	#submit {
 		@include btn;
 		
+		box-shadow: none;
 		max-width: 15em;
 	 }
 	 

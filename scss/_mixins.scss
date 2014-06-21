@@ -15,19 +15,21 @@
 }
 
 @mixin btn {
-	background: #222; 
-	background-image: -moz-linear-gradient(top, rgba(60,60,60, 0.9), rgba(34,34,34, 1)); /* Firefox */
-	background: -webkit-gradient(linear, left top, left bottom, from(rgba(60,60,60, 0.9)), to(#222)); /* Safari, Chrome */
+	background: none; 
+	border: 0.125em solid $link-color;
     display: inline-block;
-    padding: 10px 20px 10px;
-    color: #fff;
+    padding: 0.5em 0.75em; //10px 20px 10px;
+    color: $link-color;
     text-decoration: none;
     -moz-border-radius: 6px;
     -webkit-border-radius: 6px;
-    text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
     position: relative;
     cursor: pointer;
 	margin-top: 15px;
-	color: #fff !important;
-	border: none;
+	
+	&:hover {
+		border-color: $link-color-hover;
+		background-color: $link-color-hover;
+		color: #fff;
+	}
 }

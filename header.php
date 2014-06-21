@@ -73,8 +73,8 @@ $background = get_post_meta($post->ID, "hintergrund", true);
 	 	 #post-<?php echo $post->ID ?> p a,
 	 	 #post-<?php echo $post->ID ?> ul a,
 	 	 #post-<?php echo $post->ID ?> div > a,
-	 	 .commentlist a {color: #<?php echo $linkcolor; ?>; }
-	 	 #post-<?php echo $post->ID ?> p a:hover { background: #<?php echo $linkcolor; ?>; color: #fff; }
+	 	 .commentlist a {color: #<?php echo $linkcolor; ?>; border-color: #<?php echo $linkcolor; ?>; }
+	 	 #post-<?php echo $post->ID ?> p a:hover { border-color: #<?php echo $linkcolor; ?>; background-color: #<?php echo $linkcolor; ?>; color: #fff; }
 	  <?php endif; ?>
 	  .postid-<?php echo $post->ID ?> .background,
 	  #post-<?php echo $post->ID ?> .background,

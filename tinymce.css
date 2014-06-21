@@ -3,7 +3,7 @@
 /* dunkelblau : #459abc;
  hellblau : #4fc5f1; */
 
-body a.button, body a.more-link {
+body a.button {
 
 	background: #222; 
 	background-image: -moz-linear-gradient(top, rgba(60,60,60, 0.9), rgba(34,34,34, 1)); /* Firefox */
@@ -25,8 +25,7 @@ body a.button, body a.more-link {
 
  }
  
- body a.button:hover,
- body a.more-link:hover {
+ body a.button:hover {
  	background: #222;
  	color: #fff !important;
 	}

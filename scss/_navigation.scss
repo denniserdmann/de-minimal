@@ -125,29 +125,28 @@ header nav {
 	
 	a,
 	span.current {
-		border-color:transparent;
-		border: 0;
-		background: #222; 
-		background-image: -moz-linear-gradient(top, rgba(60,60,60, 0.9), rgba(34,34,34, 1)); /* Firefox */
-		background:-webkit-gradient(linear, left top, left bottom, from(rgba(60,60,60, 0.9)), to(#222)); /* Safari, Chrome */
+		border: 0.1em solid $gray-lighter;
+		
 	    display: inline-block;
-	    padding: 10px 20px 10px;
+	    padding: 0.125em 0.5em 0.25em;
 	    margin: 0 5px;
 	    
 	    text-decoration: none;
 	    -moz-border-radius: 6px;
 	    -webkit-border-radius: 6px;
-	    text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+	    color: $gray-lighter;
 	    position: relative;
 	    cursor: pointer;
 	}
 	
-	a {
-		color: #fff !important;
+	a:hover {
+		color: $gray-light;
+		border-color: $gray-light;
 	}
  
 	span.current {
-		text-decoration: underline;
-		color: #7f7f7f;
+		
+		color: $gray;
+		border-color: $gray;
 	 }
 }
