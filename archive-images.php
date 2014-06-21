@@ -21,21 +21,23 @@ get_header(); ?>
 		
 				<article id="post-<?php the_ID(); ?>" class="photos">
 				<a href="<?php the_permalink() ?>" title="<?php the_title(); ?>">
-				<div class="inside">
-                    <?php  the_content('Lies den Rest des Artikels &raquo;'); ?>
-                    <div class="headline">
-                    	<h2 class="<?php the_ID(); ?>"><?php the_title(); ?></h2>
-                    </div>
-				</div><!-- end inside -->
+					<div class="inside">
+	                    <?php  the_content('Lies den Rest des Artikels &raquo;'); ?>
+	                    <div class="caption">
+							<?php the_title(); ?>
+	                    </div>
+					</div><!-- end inside -->
 				</a>
+				
 		</article> <!-- ende id artikel -->
 		<?php endwhile; ?>
-				<?php wp_pagenavi(); ?>	
+				
 		<?php wp_reset_query(); ?>
 
 		</div><!-- end row -->
 		</div><!-- end wrapper -->
-
+		<?php wp_pagenavi(); ?>	
+		
 	<?php else :
 
 		if ( is_category() ) { // If this is a category archive
