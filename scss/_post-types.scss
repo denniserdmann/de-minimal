@@ -1,0 +1,79 @@
+//	@package WordPress
+//	@subpackage DE-Minimal
+
+/* BILDERPOST */
+
+.post.image {
+	background: #EAEAEA;
+}
+
+.post.image p {
+	margin: 0;
+	font-weight: bold;
+}
+.post.image span {
+    color: #7F7F7F;
+    font-style: italic;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.post.image img {
+    display: block;
+	
+}
+.post.image .entry {
+    text-align: center;
+}
+
+.post.image div.photocontainer  {
+	display: inline-block;
+	padding: 10px;
+	background: #fff;
+	border: 1px solid #ccc;
+	box-shadow: 0 2px 2px rgba(0,0,0,0.1);
+}
+
+.category-bilder {
+    background: #EAEAEA;
+}
+.category-bilder img {
+        max-width: 100%;
+    }
+.category-bilder .photos {
+	float: left;
+	margin-left: 30px;
+	width: 160px;
+	margin-bottom: 30px;
+	position: relative;
+}
+.category-bilder .photos .inside {
+	border: 1px solid #ddd;
+	padding: 5px 5px 5px 5px;
+	background: #fff;
+	border: 1px solid #CCC;
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+	transition: padding .1s, margin 0.1s;
+	-moz-transition: padding .1s, margin 0.1s; /* Firefox 4 */
+	-webkit-transition: padding 0.1s, margin 0.1s; /* Safari and Chrome */
+	-o-transition: padding .1s, margin 0.1s; /* Opera */
+	width: 160px;
+	
+}
+.category-bilder .photos:hover .inside {
+    position: absolute;
+    padding: 10px 10px 5px;
+    z-index: 2;
+    margin-left: -5px;
+    margin-top: -5px;
+}
+
+.category-bilder .photos h2 {
+    display: none;
+    margin-top: 0;
+}
+.category-bilder .photos:hover h2 {
+    display: block;
+    font-size: 0.8em;
+    
+}

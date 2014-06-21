@@ -1,0 +1,56 @@
+/* !ALLE ARTIKEL ANZEIGEN */
+
+.artikellist .entry {
+	padding-bottom: 0px;
+	padding-top: 0;
+	}
+	
+.artikellist h4 {
+	line-height: 1.4;
+	
+	.title {
+		min-height: 2.8em;
+	}
+	
+	.info {
+		text-align: center;
+	}
+	
+	.icon1, .icon2, .icon3 {
+		color: #bbb;
+	}
+	
+	.blogpost .icon1 {
+		color: #B33333;
+	}
+	
+	.photo .icon2 {
+		color: #B33333;
+	}
+	
+	.link .icon3 {
+		color: #B33333;
+	}
+}
+	
+.artikellist h4 a {
+	padding: 15px  0;
+	border-bottom: 1px solid #ccc;
+	display: block;
+	
+	}
+.artikellist h4 a:hover {
+	background: #eee;
+	color: #555;
+	}
+.artikellist .sidebar {
+	float: left;
+	margin: 0.1em 1em 1em 0;
+	color: #555;
+	width: 100px;
+	font-size: 0.9em;
+	line-height: 1.4;
+	border: none;
+	}	
+	
+/* !END ALLE ARTIKEL */
