@@ -91,8 +91,8 @@ $background = get_post_meta($post->ID, "hintergrund", true);
 <body <?php body_class(); ?>>
 <header>
 	<div class="header-info">
-		<a class="menu-open" id="offCanvasToggler" href="#"><i class="icon-reorder"></i><i class="icon-remove"></i></a>
-		<a class="search-open" id="searchToggler" href="#"><i class="icon-search"></i></a>
+		<a class="menu-open" id="offCanvasToggler" href="#"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+		<a class="search-open" id="searchToggler" href="#"><i class="fa fa-search"></i></a>
 	</div>
 	<div class="searchbar">
 		<?php get_search_form(); // hier die Suche formatieren ?>
