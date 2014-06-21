@@ -3,7 +3,7 @@
 
 /* MIXINS */
 
-.clearfix {
+@mixin clearfix {
 	&:after {
 		content: ".";
 		display: block;
@@ -14,7 +14,7 @@
 	}
 }
 
-.btn {
+@mixin btn {
 	background: #222; 
 	background-image: -moz-linear-gradient(top, rgba(60,60,60, 0.9), rgba(34,34,34, 1)); /* Firefox */
 	background: -webkit-gradient(linear, left top, left bottom, from(rgba(60,60,60, 0.9)), to(#222)); /* Safari, Chrome */

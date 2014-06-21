@@ -2,7 +2,12 @@
 //	@subpackage DE-Minimal
  
  // VARIABLES
-@linkColor: #68c4ee;
+$link-color: #68c4ee;
 
-@textFont: "ff-tisa-web-pro-1","ff-tisa-web-pro-2",serif;
-@headFont: "Helvetica Neue",Helvetica, Arial,sans-serif;
+$font-family-serif: "ff-tisa-web-pro-1","ff-tisa-web-pro-2",serif; // @textFont
+$font-family-sans-serif: "Helvetica Neue",Helvetica, Arial,sans-serif; // @headFont
+
+$font-family-base: $font-family-serif;
+$font-family-headings: $font-family-sans-serif;
+
+$bg-color: #fbfbfb;

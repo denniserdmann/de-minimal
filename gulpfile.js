@@ -13,7 +13,7 @@ var paths = {
         styles: 'scss/**/*.scss',
     },
     dist: {
-        styles: 'css',
+        styles: '',
     }
 };
 

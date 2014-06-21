@@ -60,14 +60,13 @@
 		border: 0;
 		color: #444;
 		padding: 0.2em .5em;	
-/* 		float: left; */
 		max-width: 10em;
 		
 		-moz-border-radius: 5px;
 		-webkit-border-radius: 5px;
 		border-radius: 5px;
 		
-		font-family: @textFont;
+		font-family: $font-family-base;
 	}
 	
 	button {
@@ -76,7 +75,7 @@
 /* 		float: left; */
 		font-size: 1em;
 		margin-left: -0.25em;
-		font-family: @textFont;
+		font-family: $font-family-base;
 		border: none;
 	
 		-moz-border-radius-topright: 5px;
@@ -101,13 +100,8 @@
 		display: none;
 	}
 	
-	#searchform:after {
-		content: ".";
-		display: block;
-		clear: both;
-		visibility: hidden;
-		line-height: 0;
-		height: 0;	
+	#searchform {
+		@include clearfix;
 	}
 }
 /* SEARCH END */

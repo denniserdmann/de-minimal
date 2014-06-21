@@ -8,10 +8,10 @@ html, body {
 }
  
 body {
- 	background-color: #fbfbfb;
+ 	background: $bg-color;
  	color:#333;
 	width: 100%;
-	font: 112.5%/1.6 "ff-tisa-web-pro-1","ff-tisa-web-pro-2",serif;
+	font: 112.5%/1.6 $font-family-base;
 	font-weight: 400;
 }
 
@@ -137,7 +137,7 @@ body {
 /* HEADLINES */
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-family: $font-family-headings;
 	font-weight: 700;
 	font-size: 1em;
 	letter-spacing: -0.02em;
@@ -216,7 +216,7 @@ h2.linktipp {
 	margin-top: 0em;
 	margin-bottom: 1.5em;
 		
-	.clearfix;
+	@include clearfix;
 
 	& > div {
 		display: inline-block;

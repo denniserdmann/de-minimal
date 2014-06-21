@@ -55,7 +55,8 @@ html, body {
   height: 100%; }
 
 body {
-  background: #fbfbfb;
+  background-color: #fbfbfb;
+  background: red !important;
   color: #333;
   width: 100%;
   font: 112.5%/1.6 "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", serif;
