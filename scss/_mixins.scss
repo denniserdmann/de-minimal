@@ -1,0 +1,35 @@
+//	@package WordPress
+//	@subpackage DE-Minimal
+
+/* MIXINS */
+
+@mixin clearfix {
+	&:after {
+		content: ".";
+		display: block;
+		clear: both;
+		visibility: hidden;
+		line-height: 0;
+		height: 0;
+	}
+}
+
+@mixin btn {
+	background: none; 
+	border: 0.125em solid $link-color;
+    display: inline-block;
+    padding: 0.5em 0.75em; //10px 20px 10px;
+    color: $link-color;
+    text-decoration: none;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    position: relative;
+    cursor: pointer;
+	margin-top: 15px;
+	
+	&:hover {
+		border-color: $link-color-hover;
+		background-color: $link-color-hover;
+		color: #fff;
+	}
+}

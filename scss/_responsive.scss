@@ -1,0 +1,207 @@
+//	@package WordPress
+//	@subpackage DE-Minimal
+
+/* smartphones in Portrait mode */
+
+@media screen and (min-width: 320px) {
+
+	body {
+		font-size: 100%;
+	}
+			
+	.single h1,
+	.home h2,
+	.archive h2,
+	.search h2 {
+		font-size: 1.6em;
+	}
+		
+	.header-info,
+	.searchbar {
+		 position: absolute;
+		 font-size: 1.5em;
+	}
+	
+	.entry, .cat-description {
+		max-width: 86%;
+		padding-left: 0;
+		padding-right: 0;
+	}
+	
+	img + .entry {
+		padding-top: 10px;
+	}
+	
+	.entry img {	
+	 	max-width: 100%;
+		height: auto;
+	}
+	
+	.nav_footer  > li {
+		width: 50%;
+	}
+	
+	.span6 {
+		float: none;
+		margin-left: 0;
+		width: 100%;
+	}
+	
+	.column50 {
+		-moz-column-count: 1;
+		-moz-column-gap: 30px;
+		-webkit-column-count: 1;
+		-webkit-column-gap: 30px;
+		column-count: 1;
+		column-gap: 30px;
+	}
+	
+	.page #hgroup {
+		h1 {
+			font-size: 2em;
+		}
+		h2 {
+			font-size: 1.25em;
+		}
+	}
+}
+
+@media screen and (min-width: 480px) {
+
+	body {
+		font-size: 125%;
+	}
+	
+	.header-info,
+	.searchbar {
+		 font-size: 1.25em;
+	}
+	
+	.single h1,
+	.home h2,
+	.archive h2,
+	.search h2 {
+		font-size: 2em;
+	}
+	
+	.entry, .cat-description {
+		max-width: 78%;
+		margin: 0 auto;
+	}
+	.two-column {
+		-moz-column-count: 1;
+		-moz-column-gap: 40px;
+		-webkit-column-count: 1;
+		-webkit-column-gap: 0px;
+		column-count: 1;
+		column-gap: 40px;
+	}
+	
+	.page #hgroup {
+		h1 {
+			font-size: 2.25em;
+		}
+		h2 {
+			font-size: 1.25em;
+		}
+	}
+}
+
+/* tablets in portrait mode min-768 = 48em */
+@media screen and (min-width: 48em) {
+
+	body {
+		font-size: 150%;
+	}
+	
+	.header-info,
+	.searchbar {
+		 font-size: 1em;
+	}
+			
+	.entry, .cat-description {
+		max-width: 78%;
+	}
+	
+	.nopadding .entry {
+		padding-left: 0px;
+		max-width: 720px;
+		margin: 0 auto;
+	}	
+	
+	.two-column {
+		-moz-column-count: 2;
+		-moz-column-gap: 40px;
+		-webkit-column-count: 2;
+		-webkit-column-gap: 40px;
+		column-count: 2;
+		column-gap: 40px;
+	}
+		
+	.single h1,
+	.home h2,
+	.archive h2,
+	.search h2,
+	.page h1 {
+		font-size: 2em;
+		line-height: 1.2;
+	}
+	h1.linktipp, h2.linktipp {
+		text-indent: -40px;
+	}	
+	.column50 {
+		-moz-column-count: 2;
+		-webkit-column-count: 2;
+		column-count: 2;
+	}
+	.span6 {
+		width: 48%;
+		margin-left: 4%;
+		float: left;
+	}
+	.nav_footer {
+		padding-left: 0;
+		
+		& > li {
+			width: 25%;
+		}	
+	}
+	
+	.page #hgroup {
+		h1 {
+			font-size: 3.75em;
+		}
+		h2 {
+			font-size: 1.75em;
+		}
+	}	
+}
+
+/* tablets in landscape mode min-width: 936px = 58.5em  */
+@media screen and (min-width: 58.5em) {
+
+	.header-info,
+	.searchbar {
+		 position: fixed;
+	}
+	
+	.entry, .cat-description {
+		max-width: 30.416667em;
+	}
+}
+/* standard laptop screens */
+@media screen and (min-width: 1200px) {
+	
+	.single h1,
+	.home h2,
+	.archive h2,
+	.search h2 {
+		letter-spacing: -0.03em;
+		line-height: 1.25;
+		font-size: 2.25em;
+	}
+}
+
+/* bigger desktop screens */
+// @media screen and (min-width: 1440px) {
+// }

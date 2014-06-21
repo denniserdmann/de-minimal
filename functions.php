@@ -141,4 +141,14 @@ function tomjn_mce_external_plugins($plugin_array){
 	$plugin_array['typekit']  =  get_template_directory_uri().'/js/typekit.tinymce.js';
     return $plugin_array;
 }
+//
+// exclude Bilder from Feed
+function myFilter($query) {
+    if ($query->is_feed) {
+        $query->set('cat','-83');
+    }
+
+return $query;
+}
+add_filter('pre_get_posts','myFilter');
 ?>

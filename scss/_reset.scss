@@ -1,0 +1,70 @@
+//	@package WordPress
+//	@subpackage DE-Minimal
+
+/* RESET */
+
+body,
+li,
+label,
+ol,
+select,
+td,
+th,
+u,
+ul,
+blockquote,
+input {
+	margin:0;
+	padding:0;
+	font-style: normal;
+	font-weight: 400;	
+}
+
+a {
+	text-decoration: none;
+	color: #68c4ee;
+	
+	&:hover {
+		color:#5599bb;
+	}
+}
+
+h1 {
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	vertical-align:top;
+	border:0px;
+}
+
+p,
+pre,
+form,
+hr {
+	margin:0 0 1.6em 0;
+	padding:0;
+}
+
+p {
+	a {
+		text-decoration: underline;
+		padding: 0 0.1em;
+	
+	
+		&:hover {
+			background: #68c4ee;
+			text-decoration: none;
+			color: #fff;
+		}
+	}
+}
+	
+ul {
+	margin-top: 1em;
+	margin-bottom: 1em;	
+}
+li {
+	list-style-type:none;
+}

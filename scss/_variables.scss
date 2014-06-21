@@ -1,0 +1,31 @@
+//	@package WordPress
+//	@subpackage DE-Minimal
+ 
+ // VARIABLES
+ 
+// COLORS
+
+$gray-dark: 		#222;
+$gray:				#777;
+$gray-light:		#bbb;
+$gray-lighter:		#ddd;
+$gray-lightest: 	#fbfbfb;
+
+$brand-primary:		#68c4ee;
+
+
+// LINKS
+$link-color: $brand-primary;
+$link-color-hover: darken($brand-primary, 20%);
+
+
+// FONTS
+$font-family-serif: "ff-tisa-web-pro-1","ff-tisa-web-pro-2",serif; // @textFont
+$font-family-sans-serif: "Helvetica Neue",Helvetica, Arial,sans-serif; // @headFont
+
+$font-family-base: $font-family-serif;
+$font-family-headings: $font-family-sans-serif;
+
+
+// GENERAL
+$bg-color: $gray-lightest;
