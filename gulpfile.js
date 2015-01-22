@@ -1,9 +1,8 @@
 var gulp        = require('gulp');
 
 var sass 		= require('gulp-sass'),
-    livereload  = require('gulp-livereload'),
-    lr          = require('tiny-lr'),
-    server      = lr();
+    livereload  = require('gulp-livereload')
+
 
 var paths = {
     master: {
@@ -21,17 +20,12 @@ gulp.task('styles', function () {
     gulp.src(paths.master.styles)
         .pipe(sass())
         .pipe(gulp.dest(paths.dist.styles))
-        .pipe(livereload(server));
+        .pipe(livereload());
 });
 
 gulp.task('watch', function() {
-    server.listen(8000, function (err) {
-        if (err) {
-            return console.log(err);
-        }
-
-        gulp.watch(paths.watch.styles, ['styles']);
-    });
+    livereload.listen();
+    gulp.watch(paths.watch.styles, ['styles']);
 });
 
 gulp.task('default', ['styles', 'watch']);
