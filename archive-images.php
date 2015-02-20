@@ -4,6 +4,11 @@
  * @subpackage DE-Minimal
  */
 get_header(); ?>
+<div id="logo">
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php bloginfo( 'name' ); ?>">						
+						<img src="<?php echo bloginfo('stylesheet_directory')?>/images/dennis-circle.svg" />
+					</a>
+				</div>
 <?php if (category_description( get_category_by_slug('category-slug')->term_id )): ?>
  <div class="cat-description">
   <h1><?php single_cat_title(); ?></h1>
@@ -30,13 +35,16 @@ get_header(); ?>
 				</a>
 				
 		</article> <!-- ende id artikel -->
+		
 		<?php endwhile; ?>
 				
 		<?php wp_reset_query(); ?>
 
 		</div><!-- end row -->
 		</div><!-- end wrapper -->
-		<?php wp_pagenavi(); ?>	
+		<?php // pagenavi ?> 
+			<?php wp_pagenavi(); ?>
+		<?php // pagenavi ?>	
 		
 	<?php else :
 
