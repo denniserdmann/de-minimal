@@ -867,7 +867,7 @@ body.category-lesezeichen h2 {
 .link-post .entry {
   background: #fff;
   border: 1px solid #ddd;
-  padding: 2em; }
+  padding: 2em 2em 0.5em; }
 .link-post .sidebar {
   text-align: left; }
 .link-post h2:before {
