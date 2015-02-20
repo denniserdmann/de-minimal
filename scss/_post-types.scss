@@ -1,6 +1,37 @@
 //	@package WordPress
 //	@subpackage DE-Minimal
 
+
+/* Link Post */
+
+.link-post {
+  	
+  	.background {
+	  	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	  	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	  	box-sizing: border-box;  
+  	
+	  	padding: 1em 0.5em;
+  	}
+	
+	.entry {
+		background: $white;
+		border: 1px solid $gray-lighter;
+		padding: 2em;
+	}
+	
+	.sidebar {
+		text-align: left;
+	}
+	
+	h2:before {
+		content: "\2605";
+		margin-right: 0.25em;
+		color: #FFAC33;
+	}
+}
+
+
 /* BILDERPOST */
 
 .category-bilder {
