@@ -5,11 +5,12 @@
  */
 get_header(); ?>
 <?php if (have_posts()) : ?>
-  <?php query_posts( array( 'category__not_in' => array(85), 'category_name' => 'journal, job', 'paged' => get_query_var('paged') ) ); ?>
+  <?php query_posts( array( 'paged' => get_query_var('paged') ) ); ?>
   		<?php $count=1 //if($paged < 2) { // front page ?>
 			<?php while(have_posts()) : the_post(); ?>
 			  <?php $einruecken = get_post_meta($post->ID, "standard", true); ?>
-			<article id="post-<?php the_ID(); ?>" class="post<?php if ($count == 1) echo ' first' ?>">
+			<article id="post-<?php the_ID(); ?>" class="post<?php if ($count == 1) echo ' first' ?>
+				<?php if ( has_post_format( 'link' )) echo 'link-post' ?>">
 			<div class="background">
 			<?php if ($count == 1): ?>
 				<div id="logo">
@@ -20,8 +21,8 @@ get_header(); ?>
 			<?php endif; ?>
 
 			<div class="entry">
-			<?php if (is_linked_list()): ?>
-			  <h2 class="<?php the_ID(); ?> linktipp"><a style="color: #B33333" href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>">&#9733;</a> <a href="<?php the_linked_list_link(); ?>" title="<?php printf( esc_attr__( 'Link to %s', 'twentyten' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+			<?php if ( has_post_format( 'link' )): ?>
+			  <h2 class="<?php the_ID(); ?> linktipp"><a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
 			
 			<?php else: ?>
 			<h2 class="<?php the_ID(); ?>">
@@ -40,20 +41,17 @@ get_header(); ?>
 				<?php endif; ?> 
 			</aside>
 			
-                    <?php the_content('Lies den Rest des Artikels &raquo;'); ?>
-                    <?php if (is_linked_list()): ?>
-				<a style="margin-bottom: 15px;" class="button" href="<?php the_linked_list_link(); ?>" title="<?php printf( esc_attr__( 'Weiter zum Artikel: %s', 'twentyten' ), the_title_attribute( 'echo=0' ) ); ?>">
-					Linktipp ansehen
-				</a>
-				<?php endif; ?>
+            <?php the_content('Lies den Rest des Artikels &raquo;'); ?>
 </div><!-- Ende entry -->
 
-<?php if ($count == 4) wp_pagenavi(); ?>
+
 			</div> <!-- neues Ende background  -->
 			</article> <!-- ende id artikel -->
 <?php $count++ ?>
 		<?php endwhile; ?>
-		
+		<?php // pagenavi ?> 
+			<?php wp_pagenavi(); ?>
+		<?php // pagenavi ?>
 		<?php // Reset Query
 			  wp_reset_query(); ?>	
 		<?php //endif; ?>

@@ -5,10 +5,11 @@
  */
 get_header(); ?>
 <?php if (have_posts()) : ?>
-<?php $count = 1 ?>
+<?php $count=1 //if($paged < 2) { // front page ?>
 <?php while(have_posts()) : the_post(); ?>
 <?php $einruecken = get_post_meta($post->ID, "standard", true); ?>
-<article id="post-<?php the_ID(); ?>" class="post <?php if (($einruecken=="") and (in_category( 'magazine' ))) echo 'nopadding'; ?>" >
+	<article id="post-<?php the_ID(); ?>" class="post<?php if ($count == 1) echo ' first' ?>
+		<?php if ( has_post_format( 'link' )) echo 'link-post' ?>">
 	<div class="background">
 	
 	<?php if ($count == 1): ?>
@@ -26,11 +27,12 @@ get_header(); ?>
 	<?php endif; ?>
 	
 	<div class="entry">
-	<?php if (is_linked_list()): ?>
-		<h2 class="<?php the_ID(); ?> linktipp">
-			<a style="color: #B33333" href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>">&#9733;</a>
-			<a href="<?php the_linked_list_link(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark"><?php the_title(); ?></a>
-		</h2>
+	<?php if ( has_post_format( 'link' )): ?>
+			<h2 class="<?php the_ID(); ?> linktipp">
+				<a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>">
+				  <?php the_title(); ?>
+				</a>
+			</h2>
 <?php else: ?>
 		<h2 class="<?php the_ID(); ?>">
 			<a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
@@ -52,11 +54,13 @@ get_header(); ?>
 				</a></p>
 				<?php endif; ?>
 	</div><!-- Ende entry -->
-	<?php if ($count == 4) wp_pagenavi(); ?>
 	</div> <!-- neues Ende background  -->
 </article> <!-- ende id artikel -->
-<?php $count++ ?>
+		<?php $count++ ?>
 		<?php endwhile; ?>
+		<?php // pagenavi ?> 
+			<?php wp_pagenavi(); ?>
+		<?php // pagenavi ?>
 	<?php else :
 
 		if ( is_category() ) { // If this is a category archive
