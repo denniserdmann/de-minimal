@@ -121,11 +121,14 @@ header nav {
 /* PAGINATION */
 .wp-pagenavi {
 	text-align: center;
+	padding-top: 30px;
 	padding-bottom: 30px;
+	background: #333;
 	
 	a,
 	span.current {
-		border: 0.1em solid $gray-lighter;
+		color: $brand-primary;
+		border: 2px solid currentColor;
 		
 	    display: inline-block;
 	    padding: 0.125em 0.5em 0.25em;
@@ -134,7 +137,6 @@ header nav {
 	    text-decoration: none;
 	    -moz-border-radius: 6px;
 	    -webkit-border-radius: 6px;
-	    color: $gray-lighter;
 	    position: relative;
 	    cursor: pointer;
 	}
@@ -145,8 +147,8 @@ header nav {
 	}
  
 	span.current {
-		
-		color: $gray;
-		border-color: $gray;
+		color: white;
+		background: $brand-primary;
+		border-color: $brand-primary;
 	 }
 }

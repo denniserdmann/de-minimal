@@ -57,7 +57,7 @@ body {
 .entry {
 	z-index: 10;
 	max-width: 660px;
-	padding: 2.5em 0.5em 1em;
+	padding: 2.5em 0.5em 2.5em;
 	margin: 0 auto;
 	
 	/* Silbentrennung */
@@ -130,6 +130,7 @@ body {
 .cat-description {
 	max-width: 660px;
 	margin: 0 auto;
+	padding-bottom: 2em;
 	
 	p {
 		margin-bottom: 0;
