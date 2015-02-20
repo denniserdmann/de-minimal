@@ -92,7 +92,7 @@ body {
 .entry {
   z-index: 10;
   max-width: 660px;
-  padding: 2.5em 0.5em 1em;
+  padding: 2.5em 0.5em 2.5em;
   margin: 0 auto;
   /* Silbentrennung */
   -webkit-hyphens: auto;
@@ -158,7 +158,8 @@ body {
 
 .cat-description {
   max-width: 660px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding-bottom: 2em; }
   .cat-description p {
     margin-bottom: 0;
     color: #7f7f7f;
@@ -486,24 +487,27 @@ header nav {
 /* PAGINATION */
 .wp-pagenavi {
   text-align: center;
-  padding-bottom: 30px; }
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background: #333; }
   .wp-pagenavi a, .wp-pagenavi span.current {
-    border: 0.1em solid #ddd;
+    color: #68c4ee;
+    border: 2px solid currentColor;
     display: inline-block;
     padding: 0.125em 0.5em 0.25em;
     margin: 0 5px;
     text-decoration: none;
     -moz-border-radius: 6px;
     -webkit-border-radius: 6px;
-    color: #ddd;
     position: relative;
     cursor: pointer; }
   .wp-pagenavi a:hover {
     color: #bbb;
     border-color: #bbb; }
   .wp-pagenavi span.current {
-    color: #777;
-    border-color: #777; }
+    color: white;
+    background: #68c4ee;
+    border-color: #68c4ee; }
 
 /* COMMENTS */
 h4#commentheadline {
@@ -653,7 +657,6 @@ body.category-lesezeichen {
   font-weight: bold; }
 
 body.category-lesezeichen h2 {
-  text-indent: -1.3em;
   min-height: intrinsic; }
 
 /* PAGE Style */
@@ -853,6 +856,25 @@ body.category-lesezeichen h2 {
     height: 0; }
 
 /* SEARCH END */
+/* Link Post */
+.link-post .background {
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+  padding: 1em 0.5em; }
+.link-post .entry {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 2em; }
+.link-post .sidebar {
+  text-align: left; }
+.link-post h2:before {
+  content: "\2605";
+  margin-right: 0.25em;
+  color: #FFAC33; }
+
 /* BILDERPOST */
 .category-bilder {
   background: #EAEAEA; }
@@ -2481,8 +2503,6 @@ body.category-lesezeichen h2 {
   .single h1, .home h2, .archive h2, .search h2, .page h1 {
     font-size: 2em;
     line-height: 1.2; }
-  h1.linktipp, h2.linktipp {
-    text-indent: -40px; }
   .column50 {
     -moz-column-count: 2;
     -webkit-column-count: 2;
