@@ -13,11 +13,6 @@ get_header(); ?>
 	<div class="background">
 	
 	<?php if ($count == 1): ?>
-		<div id="logo">
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php bloginfo( 'name' ); ?>">						
-				<img src="<?php echo bloginfo('stylesheet_directory')?>/images/dennis-circle.svg" />
-			</a>
-		</div>
 		<?php if (category_description( get_category_by_slug('category-slug')->term_id )): ?>
 			 <div class="cat-description">
 			  <h1>Kategorie: <?php single_cat_title(); ?></h1>

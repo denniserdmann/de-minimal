@@ -254,7 +254,7 @@ h6 {
   h6 a {
     color: #555; }
 
-.single h1, .home h2, .archive h2, .search h2, .page h1, .error404 h1 {
+.single h1, .home h2, .archive h2, .search h2, .error404 h1 {
   margin-bottom: 0.25em;
   margin-top: 0;
   font-weight: bold;
@@ -263,15 +263,25 @@ h6 {
   color: #333;
   text-align: center;
   word-wrap: break-word; }
-  .single h1 a, .home h2 a, .archive h2 a, .search h2 a, .page h1 a, .error404 h1 a {
+  .single h1 a, .home h2 a, .archive h2 a, .search h2 a, .error404 h1 a {
     color: #333; }
   @media screen and (min-width: 600px) {
-    .single h1, .home h2, .archive h2, .search h2, .page h1, .error404 h1 {
+    .single h1, .home h2, .archive h2, .search h2, .error404 h1 {
       text-align: left;
       margin-left: 65px; } }
   @media screen and (min-width: 980px) {
-    .single h1, .home h2, .archive h2, .search h2, .page h1, .error404 h1 {
+    .single h1, .home h2, .archive h2, .search h2, .error404 h1 {
       margin-left: 0px; } }
+
+.page h1 {
+  margin-bottom: 0.25em;
+  margin-top: 0;
+  font-weight: bold;
+  font-size: 2em;
+  line-height: 1.24;
+  color: #333;
+  text-align: center;
+  word-wrap: break-word; }
 
 .single h2 {
   font-size: 1.2em; }

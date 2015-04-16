@@ -9,11 +9,7 @@ get_header(); ?>
 <div id="post-<?php the_ID(); ?>" class="post">
 <div class="wrapper">
 <div class="background">
-	<div id="logo">
-		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php bloginfo( 'name' ); ?>">						
-			<img src="<?php echo bloginfo('stylesheet_directory')?>/images/dennis-circle.svg" />
-		</a>
-	</div>
+	
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 		
 		<div class="headerimage">

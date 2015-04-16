@@ -260,7 +260,6 @@ h6 {
 .home h2,
 .archive h2,
 .search h2,
-.page h1,
 .error404 h1 {
 	margin-bottom: 0.25em;
 	margin-top: 0;
@@ -284,6 +283,17 @@ h6 {
 	@media screen and (min-width: 980px) {
 		margin-left: 0px;
 	}
+}
+
+.page h1 {
+	margin-bottom: 0.25em;
+	margin-top: 0;
+	font-weight: bold;
+	font-size: 2em;
+	line-height: 1.24;
+	color:#333;
+	text-align: center;
+	word-wrap: break-word;
 }
 
 .single h2 {
