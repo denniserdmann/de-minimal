@@ -89,15 +89,32 @@ $background = get_post_meta($post->ID, "hintergrund", true);
  ?>
 </head>
 <body <?php body_class(); ?>>
-<header>
+<header>				
 	<div class="header-info">
 		<a class="menu-open" id="offCanvasToggler" href="#"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
-		<a class="search-open" id="searchToggler" href="#"><i class="fa fa-search"></i></a>
 	</div>
-	<div class="searchbar">
-		<?php get_search_form(); // hier die Suche formatieren ?>
-	</div>
+	
 	<nav>
 		<?php wp_nav_menu( array('menu' => 'Headermenü', 'container' => false, 'menu_class' => 'nav_header' )); ?>
+		<div class="searchbar">
+		<?php get_search_form(); // hier die Suche formatieren ?>
+	</div>
 	</nav>
+	<div class="logo">
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php bloginfo( 'name' ); ?>">						
+			<img src="<?php echo bloginfo('stylesheet_directory')?>/images/dennis-circle.svg" />
+		</a>
+	</div>
+
+	
+	<?php if (is_home() and !is_paged()): ?>
+		<div class="header-image">
+			<img src="<?php echo bloginfo('stylesheet_directory')?>/images/header-boat.jpg" width="1600" height="900" alt="" />
+		
+			<div class="hgroup">
+				<h1>Dennis Erdmann</h1>
+				<p>Webdesigner // Webentwickler // Unternehmer</p>
+			</div>
+		</div>
+	<?php endif; ?>
 </header>
