@@ -8,17 +8,15 @@ get_header(); ?>
   <?php query_posts( array( 'paged' => get_query_var('paged') ) ); ?>
   		<?php $count=1 //if($paged < 2) { // front page ?>
 			<?php while(have_posts()) : the_post(); ?>
+			<?php if ($count == 1): ?>
+				
+			<?php endif; ?>
+			
 			  <?php $einruecken = get_post_meta($post->ID, "standard", true); ?>
 			<article id="post-<?php the_ID(); ?>" class="post<?php if ($count == 1) echo ' first' ?>
 				<?php if ( has_post_format( 'link' )) echo 'link-post' ?>">
 			<div class="background">
-			<?php if ($count == 1): ?>
-				<div id="logo">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php bloginfo( 'name' ); ?>">						
-						<img src="<?php echo bloginfo('stylesheet_directory')?>/images/dennis-circle.svg" />
-					</a>
-				</div>
-			<?php endif; ?>
+			
 
 			<div class="entry">
 			<?php if ( has_post_format( 'link' )): ?>

@@ -16,8 +16,7 @@
 		font-size: 1.6em;
 	}
 		
-	.header-info,
-	.searchbar {
+	.header-info {
 		 position: absolute;
 		 font-size: 1.5em;
 	}
@@ -143,7 +142,7 @@
 	.archive h2,
 	.search h2,
 	.page h1 {
-		font-size: 2em;
+		font-size: 5vw;
 		line-height: 1.2;
 	}
 
@@ -178,8 +177,7 @@
 /* tablets in landscape mode min-width: 936px = 58.5em  */
 @media screen and (min-width: 58.5em) {
 
-	.header-info,
-	.searchbar {
+	.header-info {
 		 position: fixed;
 	}
 	

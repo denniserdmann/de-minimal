@@ -9,13 +9,19 @@
 	color: rgba(0,0,0,0.75);
 	width: 1.2em;
 	text-align: center;
-	padding: 0 0.125em 0em;
+	padding: 0.5em 0.125em 0em;
 	display: block;
 	float: left;
 	font-size: 1.2em;
 	line-height: 1.25;
-
+	position: relative;
+	z-index: 7000;
 }
+
+.home:not(.paged) .header-info a {
+	color: $bg-color;
+}
+
 a.menu-open .fa-times {
 	display: none;
 }
