@@ -70,6 +70,7 @@ $background = get_post_meta($post->ID, "hintergrund", true);
 	.page #post-<?php echo $post->ID ?> h2,
 	.category #post-<?php echo $post->ID ?> h2 a { <?php echo $headline; ?> }
 	  <?php if($linkcolor): ?>
+	  	 .postid-<?php echo $post->ID ?> .header-info a,
 	 	 #post-<?php echo $post->ID ?> p a,
 	 	 #post-<?php echo $post->ID ?> ul a,
 	 	 #post-<?php echo $post->ID ?> div > a,

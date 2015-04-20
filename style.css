@@ -129,7 +129,10 @@ body {
   margin: 0 auto;
   padding: 1.25em 0 1em;
   width: 120px;
-  z-index: 500; }
+  z-index: 500;
+  position: absolute;
+  left: 55%;
+  margin-left: -60px; }
   #logo img, .logo img {
     display: block;
     width: 100%; }
@@ -137,10 +140,11 @@ body {
     #logo, .logo {
       position: absolute;
       top: 0;
+      left: 0;
       margin-left: 1.5em; } }
 
-.home .logo {
-  position: absolute;
+.home .logo, .page .logo {
+  left: 0;
   margin-left: 1.5em; }
 
 .entry {
@@ -290,6 +294,20 @@ h2.linktipp {
   text-align: left; }
 
 /* end HEADLINES */
+.single .background, .search .background {
+  padding-top: 120px; }
+  @media screen and (min-width: 600px) {
+    .single .background, .search .background {
+      padding-top: 0; } }
+.single .background.has-thumbnail, .search .background.has-thumbnail {
+  padding-top: 0; }
+
+.page .wrapper .background {
+  padding-top: 120px; }
+  @media screen and (min-width: 600px) {
+    .page .wrapper .background {
+      padding-top: 0; } }
+
 .sidebar, .tagcloud {
   color: #7f7f7f;
   color: rgba(0, 0, 0, 0.5);
@@ -528,6 +546,8 @@ header nav {
     max-width: 10em;
     padding: 0 0.5em;
     margin: 0 auto; }
+    header nav li:first-child {
+      margin-top: 1em; }
     header nav li a {
       color: #fff;
       display: block;
