@@ -108,6 +108,9 @@ body {
 	padding: 1.25em 0 1em;
 	width: 120px;
 	z-index: 500;
+	position: absolute;
+	left: 55%;
+	margin-left: -60px;
 		
 	img {
 		display: block;
@@ -117,13 +120,15 @@ body {
 	@media screen and (min-width: 600px) {
 		position: absolute;
 		top: 0;
+		left: 0;
 		margin-left: 1.5em;
 
 	}
 }
 
-.home .logo {
-	position: absolute;
+.home .logo,
+.page .logo {
+	left: 0;
 	margin-left: 1.5em;
 }
 
@@ -274,7 +279,6 @@ h6 {
 		color: #333;
 	}
 
-
 	@media screen and (min-width: 600px) {
 		text-align: left;
 		margin-left: 65px;
@@ -304,6 +308,34 @@ h2.linktipp {
 	text-align: left;
 }
 /* end HEADLINES */
+
+// single webpage
+
+.single,
+.search {
+	.background {
+		padding-top: 120px;
+		
+		@media screen and (min-width: 600px) {
+			padding-top: 0;
+		}
+	}
+	
+	.background.has-thumbnail {
+		padding-top: 0;
+	}
+}
+
+// page
+.page {
+	.wrapper .background {
+		padding-top: 120px;
+		
+		@media screen and (min-width: 600px) {
+			padding-top: 0;
+		}
+	}
+}
 
 .sidebar, .tagcloud {
 	color: #7f7f7f;

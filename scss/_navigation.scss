@@ -63,6 +63,10 @@ header nav {
 		padding: 0 0.5em;
 		margin: 0 auto;
 		
+		&:first-child {
+			margin-top: 1em;
+		}
+		
 		a {
 			color: #fff;
 			display: block;
